@@ -1,0 +1,9 @@
+{
+  "groups": [
+    "dev"
+  ],
+  "comment": "Tere Ramirez",
+  "id": "tere",
+  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAu01TLErs2m5ljqCpp9TvJUoyxWZ/fmyrOsDTC1WhKYaue7WmQK6fn4VthdpEFOzFR+dVax8ArBvnlXIGfx3XFYakU0l+9SJjgze18qPqU860At/06scpOmgMA8hoC8HqXopGuH65G3OgNe7madn4f5fFvWAaOgl8WfkxISJUlJ0RGgqJrGQhLaBsP/Dni49ae4KrvTYUTXfyNE7XYquodH1gvOLYmGo9UwfSBOJOziUOrGwtEihSozdz/4/onIi3PoVWLQ0lps3LaLmPQxbJfmuraxbBC5Iz/MOwL/UgyWN50uRJlFVuPumACa9jG9WTBGRc4JB2nZOgCpcLL1HLBw== mtem27@yahoo.com",
+  "password": "$1$M0lgF5hc$568/Rj1y7yc4yffBpnch./"
+}

@@ -1,0 +1,9 @@
+{
+  "groups": [
+    "dev"
+  ],
+  "comment": "Jonathan Himbing",
+  "id": "jonathan",
+  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWMF4kRb00FB2b1E9MeeX+siZR8fz6bNsbCqf9RV5nVFM8gCpGSBzHOISS62UJnUvLU8TIPlajEVjbGO8f5EEEmJ+yG3ZqcuCu5Qo07h1MyCP3zQbee8sQ0DVvSoWoyheMaP6mfmoS/WtIiZAmO9yGZAMuY0sAfYImCy3AvGZOcWymEIDUqRQlUbcEpUG1jtCaPO9WGnlDJ7FizBtLhwdcDHyt0Dw56V5TaG63vb65+xjIrSXTn95+6XRLNkvLCC3VLJkPzetcF8GyQHp2+BUPQiCfYAs3xQep15I1BqvxXS4ydJSXimsb9VSdTXp7m53/2+P6HIsdg3EMr2pkv973 nathanjo@nathanjo",
+  "password": "$1$y.D7EclU$12EZ5UD.qV3tP5EZlrDFi0"
+}

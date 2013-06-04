@@ -1,0 +1,10 @@
+{
+  "groups": [
+    "ops"
+  ],
+  "comment": "Marius Ducea",
+  "id": "marius",
+  "local_files": true,
+  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAtFqsWh741YOA8f+Rd2bkMUSC4tPHePR4re2ngAP+cxLVH5Gx2wlkmMM/jSAA/k7+vmJ0NOypj+m7a7G/42zUklH7DiS/hy84PcjLOhgAcrGWfSddL9BtOYUzJAiXJbmwfrHDz80J7ZyCdjY4zdcNhJNT9PYoaLlaCVJCjUnFrsJBNFqcArj4W3WyNDxOk8KrNCfJpm9jCffz0HXAa0yoC3vGaoDUmI73qg2NjRedi7XxHvqQE5n+QbbZIVamRjmNN2OX6+YObSFp4ga+iRq8e0amNgsRh7KLE6A9mhO0JaueGRZTBI7DWBY0FW0nnEhm3xVp+XTnKF2OLzF5eGa7/Q== marius.ducea@gmail.com",
+  "password": "$6$w/TFk0Gg$qnUrQhk5VzGFAFOalhSv8E7z5A/1fixpPN0xmeATZFl097w3Vp6QQBW.bkZqDr5VpvJxbLoN8a/CMZabUjtyQ."
+}

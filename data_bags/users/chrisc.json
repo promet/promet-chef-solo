@@ -1,0 +1,9 @@
+{
+  "groups": [
+    "dev"
+  ],
+  "comment": "Chris Calip",
+  "id": "chrisc",
+  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDu9wHRQI+jLjtRkJhj0o0tLmK1PUpLqH33YuxPmc3eV8Vsr5YLLEyl6ypd7o8J2uYYtamvECgdhE7nVj/P4BWNBGd7+fT7YmYVLm4f6+jOph768ij0pGAQ84JRAO/0A7iAOWoxyVgoq3uWobkVka4wd+GbbrVQKfvnv3kZmdDqEOl5FUPnQHVLmCzlgR7Omd5pmy1u8fdGXmd8m9lbUGHcJrHhrWmlJpHF2jYz3xbY2rwJjcfwrz71bQjIy47v0xlV8E1SvhigcHp5N0O4z9cW9ab3XzJLHyS+Hq43DaysLuFXGeAMT4h92GRAqBlmbkqXuvHMnIVii6uBhG8Eg3sP quickstart@qs10",
+  "password": "$1$m7PkQlfh$A/Pxv.O1nCdJCRcbtYaUY."
+}

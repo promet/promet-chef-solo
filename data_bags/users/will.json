@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "Will Milton",
+  "id": "will",
+  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoTBCJp5TOL9/HUKIAYSFkmhoZ6WmcbxgfBp2RO7SQid/2xwNavxs1hHHgjQ0NgR58jhusJGmuDza6xl0Fh6sWvsNsCI1V9rJf7HkUVaP0vVpSQLV3QDtzHOb3WsSqJDe2oJdV7MvnhosQk/nIeTRGVuPdiCy3ZYDi3X0W9cl/AxZ6nu3RlK/fb87vnUWaXxEA8Y315UCjncpd0uXQLZNsZppC/8jPoxNLZZwHccDJ0oU0pKsbr8fTmaAL76ULJVC/mb/OnJe3Rya8BaysOycLbcZ8ucxBmwiCCCVwwi13WyzuIevjC4Fi1GpCV73gdGoDgWFMSVh/P/OdjE/9VVe9 willmilton@Wills-MacBook-Pro.local",
+  "password": "$1$uW61DXOk$pdbdvPN2UF4KsnCdYhllO1",
+  "shell": "/bin/bash"
+}

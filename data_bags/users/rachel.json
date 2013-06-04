@@ -1,0 +1,9 @@
+{
+  "groups": [
+    "dev"
+  ],
+  "comment": "Rachel Jaro",
+  "id": "rachel",
+  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtc91gvtDa1ScQiALNuNjvCwmC/OH1lY3t8Vog3cC1RXgZj5nbcugEfE6wtm0tl/MyO4ZGyecgHqImxi+Hb7m9eVA66NVnqJspNhsK67XspPWlTPUbx4acLwsNm+TP2s+9aEd02RFxMqLFwPZK9UyygkX7bpfdPSfhUTvP6Q1mjovub5xPFCTU0/XZ9UWNLmfzNfxh6BWANVrSh18IOQk0Ih1bourIKq9xTBQbJ9dMIbRrN09CES+PRnE9YZ1B0Lt9X+yIQ+7y96y86Dgx4GxFXQOsgG7iMOI5yFuSRzd4ayJWBwBO8p2O7kwU0Eemh1fIhOU1YvTswUnRDKCnTt7N rachel@petixe.com",
+  "password": "$1$d9U/oMGh$HRJ.0Th3SISYJboGYQcb71"
+}

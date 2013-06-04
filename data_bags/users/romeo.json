@@ -1,0 +1,9 @@
+{
+  "groups": [
+    "dev"
+  ],
+  "comment": "Romeo Loyola",
+  "id": "romeo",
+  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAzqilWNPo9iAca7xZgsWHuSpnrL+KuUBpIpw8L/W/1NGXxCUKlLx2h9SDIDQWLns2L0ddzVP8Wfc8o/x2vqYdSX3MFz8QOxG+zc2D+LgnyJVor4mciIf+dNDQtdr+Y7PG0OEiKs+yOXQdYEOuMt+/TI6SEckBk88+Hkc/BrmGUrV3S37MBbi46Ohx2iYtOjTQd2YUAhnFZGQnXXlO8TFxb10gCmBsRfAoVOXX5lrMPk6VXKQd43mRGPeCCefkNDaE7mK3xwBKirkzuHe1++L3PgmXwxVRM9q1ImAj5dbM5QEY16kkGaEEW85myWnNZGyHrj4qzGyFJGgHUHq3FM1YBw== romeo@promethost.com",
+  "password": "$1$rHD/9TXL$MaFaiCLwC1WCO60.wuYL0."
+}

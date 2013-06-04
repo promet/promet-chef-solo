@@ -1,0 +1,9 @@
+{
+  "groups": [
+    "dev"
+  ],
+  "comment": "Erik Baldwin",
+  "id": "erik",
+  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA13quqt2wxqJ3aRiHp0clDGh30LMHCIfQB6aj4sORIdUpWjYtEXwev2ZAshQ2Hp8MiQegZlq8MsSMt/cDMS0HctYxgl2khduLyGTr8Pcmv4SNY7EQ00Hz4zB1luVcpGncfQv4X5UIMUcwDjisQbqamXqKXHSmEWk60xKYzkSu8XLEOd0gnl8uDZTITSUs8VB4tJK9Sn2fBjgCDa9L3zf43BvrdCc7wv4m90DVmOBIB0hFwZ/sDNldGGD+2QL84TYbYfC+rrsZgP6xNOtHbfRvh2H69xjLT0I2a63GY86tRgCZqeYIHq800YSr7KBuuTZaXm2blpUGifMDLz43UDHtHQ== ThatGuy@ErikBaldwin.com",
+  "password": "$1$lZSyqsz7$H9XEba3SfQYQMKzD0y.LR0"
+}

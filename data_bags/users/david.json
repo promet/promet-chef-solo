@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "David Blum",
+  "id": "david",
+  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAsVZz2NGh6UjxPd0BQMrXDVFU8+wXQMG4cXx4RVQbbn8eXxlZok40WZ1Wr3OlWrgAfyZXp4+OSPNF2iYL5duLsz5ZlBXQlTHFVhVQGCJ0HdDxLDOtAGYNXqTkfMl/9sYrYv5jtHJ3tmeiDXGITnCnLISANop0qRScwAt1JcElFd3+nyTosEL/vIf8Tmui4Mc2HngyMfzN9umklvnHdPufNXDrrROvYyrcoGog7cgUUgFrFZjrGtKaEvE2n4vDqJcO7k/rEFAjBKqJ3SVzoKMCNHl5Qg+ADyhKO+rfhXI4yq3jGVDEFeD618QLQKBiHf4Q5pfaoWTWfO+YtrNRNtV6eQ== david@David-Blums-MacBook-Pro.local",
+  "password": "$1$omcbcImX$ULCAGpcg4BOB4SbVm5RBw0",
+  "shell": "/bin/bash"
+}

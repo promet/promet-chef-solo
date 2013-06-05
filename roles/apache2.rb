@@ -2,7 +2,6 @@ name "apache2"
 description "Apache2 role"
 run_list(
     "recipe[apache2]",
-    "recipe[passenger_apache2]",
     "recipe[apache2::mod_php5]",
     "recipe[apache2::mod_ssl]",
     "recipe[apache2::mod_rewrite]",

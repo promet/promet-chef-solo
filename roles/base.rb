@@ -15,6 +15,7 @@ run_list(
     "recipe[chef-client::delete_validation]",
     "recipe[chef_gem::ruby-shadow]",
     "recipe[sudo]",
+    "recipe[users]",
     "recipe[users::sysadmins]",
     "recipe[ntp]"
 )

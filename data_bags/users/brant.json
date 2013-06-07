@@ -1,9 +1,0 @@
-{
-  "groups": [
-    "dev"
-  ],
-  "comment": "Brant Wynn",
-  "id": "brant",
-  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA0Md+IU2/EyQ1abH/XFkHSmJ5k8LOhi66z7Zm2kNJfLgPftRVCLEFp3h37MIM6clIpHKeK1Vh/MeN11DK/fFQzX0xLFR/bp4uPTo3dABc9n5AyxPUja7mBTmPdE6cERY/yTeMy0ti6g/ZGJFHnw2LyqNuK4CvKdbJjkd9PToUk71cJMg7AWqFT/a0yZ0b3EOLUifKetqu53Y69rZhSjbsEzYYbD/DU7qD+UmMCPpKE26rKytUXjVbw7rViMHlyrRgXC9KjoQL6wmyo78d3ab67SyrHMfTlekuHyvCCpfJA4R+ndWLX2mSHeZyHLq6E8HHSGBdT0QTDpvyeYFJvi0QDw== brant@promethost.com",
-  "password": "$1$cXApIBHW$RTj/8Lhwos3cGk60BJK4I0"
-}

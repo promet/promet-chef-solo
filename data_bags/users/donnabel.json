@@ -4,6 +4,7 @@
   ],
   "comment": "Donnabel Carato",
   "id": "donnabel",
-  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAviz3mjKGkvGtwiQYzHz0p3nvDbexzw7u2fcZWIPXGVLY1BuJiCEVLBKq2gH3KGu3BN2Dzv954Warkndr0M063y3MHzXwZojRvJ+IVj3AqXraoxviuiUl8bzhd8843/Cv6n292dNqYFtlPYQHWI7Y5Q9alRu8s2xVFbR6IHwtRfXAPFaeCiBr36dxN7K551eLlRtx3JpViwVyIe2/L9cWVHtUMa8aTgbESiPxpKD5Vn87orueG46eZA+vfvyluf1p8NE85Rq5RU7Cxjpg9xsNkRzj7M0FRIq3QMwFihIGyFRP+VnXt4UjWDTbCN+MMWbYggRfn8zLyHR1xR5qrs2KIw== donnabel@promethost.com",
-  "password": "$1$qyY9q8nT$RtZtQjOyJ1jZPNpyqOteT/"
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAviz3mjKGkvGtwiQYzHz0p3nvDbexzw7u2fcZWIPXGVLY1BuJiCEVLBKq2gH3KGu3BN2Dzv954Warkndr0M063y3MHzXwZojRvJ+IVj3AqXraoxviuiUl8bzhd8843/Cv6n292dNqYFtlPYQHWI7Y5Q9alRu8s2xVFbR6IHwtRfXAPFaeCiBr36dxN7K551eLlRtx3JpViwVyIe2/L9cWVHtUMa8aTgbESiPxpKD5Vn87orueG46eZA+vfvyluf1p8NE85Rq5RU7Cxjpg9xsNkRzj7M0FRIq3QMwFihIGyFRP+VnXt4UjWDTbCN+MMWbYggRfn8zLyHR1xR5qrs2KIw== donnabel@promethost.com",
+  "password": "$1$qyY9q8nT$RtZtQjOyJ1jZPNpyqOteT/",
+"shell": "/bin/bash"
 }

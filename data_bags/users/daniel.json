@@ -4,6 +4,7 @@
   ],
   "comment": "Daniel Honrade",
   "id": "daniel",
-  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDY+NOVg7dsvlKRvIyGk869VN69yYJ2BvYQdUbiVy/JmkMZCv43MZfntDCWcwfohWu4y1HYsstX2PVB2Tl1psr0etYHjZmbQUWr9J9gf0xsFvcCJum+IPQnR3qGBTW6XDDfsEZEE/41A0MMRf3ilp8/KRaspXeEy2usr7QyA462EEgicv34MEAhhUuxRtesRS95mE6+sgZjwEmlz/OKpOrMxf2dQ6mRVAGuS5nJmAtDFiibxAmg0AyMWQ9Kxxt4Tdid4fAkn12nhNlau/xiN162oATWG33E5B5TSTkZI7nqPBArT4lU55xFiozLPPit0CUJNmBJf5VvvIQYN58QYsGh Linux Key",
-  "password": "$1$MlXmWaGg$0.HqyEE8NXQtpkdDs/awf1"
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDY+NOVg7dsvlKRvIyGk869VN69yYJ2BvYQdUbiVy/JmkMZCv43MZfntDCWcwfohWu4y1HYsstX2PVB2Tl1psr0etYHjZmbQUWr9J9gf0xsFvcCJum+IPQnR3qGBTW6XDDfsEZEE/41A0MMRf3ilp8/KRaspXeEy2usr7QyA462EEgicv34MEAhhUuxRtesRS95mE6+sgZjwEmlz/OKpOrMxf2dQ6mRVAGuS5nJmAtDFiibxAmg0AyMWQ9Kxxt4Tdid4fAkn12nhNlau/xiN162oATWG33E5B5TSTkZI7nqPBArT4lU55xFiozLPPit0CUJNmBJf5VvvIQYN58QYsGh Linux Key",
+  "password": "$1$MlXmWaGg$0.HqyEE8NXQtpkdDs/awf1",
+"shell": "/bin/bash"
 }

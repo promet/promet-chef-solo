@@ -6,5 +6,6 @@
   "htaccess": "icingaadmin:$apr1$KUjo2Naj$LLeStCli4ljbHKzrY.4Uo/",
   "icinga": [
     "sysadmins@promethost.com"
-   ] 
+   ],
+"shell": "/bin/bash"
 }

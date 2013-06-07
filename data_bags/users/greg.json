@@ -6,7 +6,8 @@
   ],
   "comment": "Greg Palmier",
   "id": "greg",
-  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCfqCD798b9OAhTQxJda3zFhLr25wnpSENAF67SDG0uTD8DvxiWvEri5e6VnpJe2ca8TcE5/+s9Jhj7IFzLO/O6yylsjhENOOr011CxLmnybFghwfdX0nfNCDVBawaTm9TPmWGQN29sY5NoO9FgMyc6Pqgy+Y+PMN2jHBONe+l6aRZqi3cSQnfE6EBPkxBhkW8V1i2cg3ObXOSxdc6ATFQQ2lr18lYvmh8B8KhO2sLqvkDucnxiU0KgbsvJw/gAftqRYJgQFmrWeQum9GVOPhJPlVuWeVRxOFsWV4GP9ex3Fxaq0GG9FgzgX6P1Vxoidxt7WqPqKdNq4FbPF1ZtDGPP greg@grapple",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCfqCD798b9OAhTQxJda3zFhLr25wnpSENAF67SDG0uTD8DvxiWvEri5e6VnpJe2ca8TcE5/+s9Jhj7IFzLO/O6yylsjhENOOr011CxLmnybFghwfdX0nfNCDVBawaTm9TPmWGQN29sY5NoO9FgMyc6Pqgy+Y+PMN2jHBONe+l6aRZqi3cSQnfE6EBPkxBhkW8V1i2cg3ObXOSxdc6ATFQQ2lr18lYvmh8B8KhO2sLqvkDucnxiU0KgbsvJw/gAftqRYJgQFmrWeQum9GVOPhJPlVuWeVRxOFsWV4GP9ex3Fxaq0GG9FgzgX6P1Vxoidxt7WqPqKdNq4FbPF1ZtDGPP greg@grapple",
   "password": "$1$zH9y97V3$7NIW6mOXg455bceFIZ1p61",
-  "local_files": true
+  "local_files": true,
+"shell": "/bin/bash"
 }

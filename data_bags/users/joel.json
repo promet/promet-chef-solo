@@ -1,9 +1,0 @@
-{
-  "groups": [
-    "ops"
-  ],
-  "comment": "Joel Scoble",
-  "id": "joel",
-  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxRqxyQflqDeSJXIJeVHyDQQRZfdLF1oDLCtJLwSUL5p8qnInMSNPJy1mQuAyMzyU3tCWlYYza537pv6ay/OePzF6GYk61jjdd7gqBN57mxtj081aTgc/xPPYlDWjZhNPW7M+k8OkzjvG/4J5uz5b11du8vFRghHlr2TAxGAxnpZ8gXJS8kR52SET+ZRD0M0k0GBZG/H9cw1LUtAWYkbCUGPzsdiy70SVL3mXFEWo7nU+z4ahS1Gsou3nwlkjfbUVHQ7YqxTk0kOgsAM9dWtmNepAYVZjMHMzh8Hwfy/I6B/KKi0GN2eWqViqKw1Oo9KXL8mi+miho+RqwbyfL/Qet jscoble@vps",
-  "password": "$1$ZqGq4O74$GT7ilaJpVoSRRkpDG2Rrw."
-}

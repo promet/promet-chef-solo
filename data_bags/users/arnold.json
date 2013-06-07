@@ -4,6 +4,7 @@
   ],
   "comment": "Arnold French",
   "id": "arnold",
-  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8tI5Jiu1egqYko0LjhQEHrgAx9ppuFpmyHHcdQv7dPTBf8siEr9yU2uGnb7SaLZ7MN+Fjvzxb1mBlvtU9uVXSSX64Q8w9uj2hJQyxHHuZUZrRyZo/09nxnFAQMZw+C0TuWriqadi4F7vDRjEC/WMeLxC+u92JFwbolrbOaM2bMUExSd1Rok3L2XHLffUTb4b9VoXCtaRkB2wx27K9yYZEcJaegbGQkAyZQmtia9GhXiHMfQHMXd4x3+MjcVkp0LBfHlG/zmXTGalimng6cnuX5Y+rFtrLLackrlpr1F+H5cRxiwfvkT15HQNi8uI9gNaXQnrOQM/mq0ZuRFQYzu3H arn.french@gmail.com",
-  "password": "$1$sK8zG9l7$gHyBHGk8nHjpJc58nulN21"
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8tI5Jiu1egqYko0LjhQEHrgAx9ppuFpmyHHcdQv7dPTBf8siEr9yU2uGnb7SaLZ7MN+Fjvzxb1mBlvtU9uVXSSX64Q8w9uj2hJQyxHHuZUZrRyZo/09nxnFAQMZw+C0TuWriqadi4F7vDRjEC/WMeLxC+u92JFwbolrbOaM2bMUExSd1Rok3L2XHLffUTb4b9VoXCtaRkB2wx27K9yYZEcJaegbGQkAyZQmtia9GhXiHMfQHMXd4x3+MjcVkp0LBfHlG/zmXTGalimng6cnuX5Y+rFtrLLackrlpr1F+H5cRxiwfvkT15HQNi8uI9gNaXQnrOQM/mq0ZuRFQYzu3H arn.french@gmail.com",
+  "password": "$1$sK8zG9l7$gHyBHGk8nHjpJc58nulN21",
+"shell": "/bin/bash"
 }

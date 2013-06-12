@@ -11,7 +11,7 @@ run_list(
 
 default_attributes(
   :php => {
-    :upload_max_filesize    => "10M",
+    :upload_max_filesize    => "20M",
     :post_max_size          => "10M",
     :max_execution_time     => "300",
     :max_input_time         => "300",

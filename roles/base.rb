@@ -12,9 +12,10 @@ run_list(
     "role[fail2ban]",
     "recipe[tmux]",
     "recipe[git]",
-    "recipe[chef-client::delete_validation]",
+    "role[chef-client]",
     "recipe[chef_gem::ruby-shadow]",
     "recipe[sudo]",
+    "recipe[postfix]",
     "role[users]",
     "recipe[ntp]"
 )

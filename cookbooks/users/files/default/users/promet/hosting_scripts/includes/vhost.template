@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+    ServerName SITENAME
+    DocumentRoot /var/www/sites/SITENAME
+    ServerAdmin webmaster@SITENAME
+    ErrorLog /var/log/apache2/SITENAME-error.log
+    CustomLog /var/log/apache2/SITENAME-access.log combined
+    <Directory "/var/www/sites/SITENAME">
+        Options -Indexes
+        AllowOverride All
+        Order Allow,deny
+        Allow from all
+	AuthType Basic
+	AuthName "Development Area"
+	AuthUserFile /var/www/sites/.htpasswd
+	Require valid-user
+    </Directory>
+</VirtualHost>

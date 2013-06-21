@@ -15,7 +15,7 @@ run_list(
     "role[chef-client]",
     "recipe[chef_gem::ruby-shadow]",
     "recipe[sudo]",
-    "recipe[postfix]",
+    "role[postfix]",
     "role[users]",
     "recipe[ntp]"
 )

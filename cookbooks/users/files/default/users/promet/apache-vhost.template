@@ -1,0 +1,19 @@
+<VirtualHost *:80>
+       ServerName SITENAME.prometdev.com                            
+       DocumentRoot /var/www/sites/SITENAME.prometdev.com
+       ServerAdmin webmaster@SITENAME.prometdev.com
+       ErrorLog /var/log/apache2/SITENAME.prometdev.com-error_log
+       CustomLog /var/log/apache2/SITENAME.prometdev.com-access_log combined
+       <IfModule php5_module>
+          php_value newrelic.appname "SITENAME.prometdev.com"
+       </IfModule>
+       <Directory "/var/www/sites/SITENAME.prometdev.com">
+           Options -Indexes
+           AllowOverride All
+           Order deny,Allow
+           AuthType Basic
+           AuthName "Development Area" 
+           AuthUserFile /var/www/sites/.htpasswd
+           Require valid-user
+       </Directory>
+</VirtualHost>

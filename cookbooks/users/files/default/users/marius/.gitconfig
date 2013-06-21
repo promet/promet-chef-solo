@@ -1,0 +1,12 @@
+[user]
+	name = Marius Ducea
+	email = marius.ducea@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	last = log -1 HEAD
+	unstage = reset HEAD --
+[color]
+	ui = true

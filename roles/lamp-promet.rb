@@ -4,7 +4,7 @@ run_list(
     "role[base]",
     "role[apache2]",
     "role[php]",
-    "role[mysql_server]"
+    "role[mysql_server]",
     "role[monit]"
 )
 

@@ -7,4 +7,5 @@ run_list(
 )
 
 default_attributes(
+	:monit => { :notify_email => "sysadmins@promethost.com" }
 )

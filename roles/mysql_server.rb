@@ -17,9 +17,8 @@ default_attributes(
 )
 override_attributes(
   :mysql => {
-    :server_root_password => "mysqladmin99..",
-    :server_repl_password => "replpass99..",
-    :server_debian_password => "debianpass99.."
+    :server_root_password => "pr0m3tmysql",
+    :server_repl_password => "replpass",
+    :server_debian_password => "debianpass"
   }
 )
-

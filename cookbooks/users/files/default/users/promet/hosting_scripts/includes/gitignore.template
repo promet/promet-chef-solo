@@ -1,0 +1,9 @@
+sites/*/*settings*.php*
+sites/*/private
+sites/*/files
+./files
+.htaccess
+.DS_Store
+*.swp
+CVS
+.svn

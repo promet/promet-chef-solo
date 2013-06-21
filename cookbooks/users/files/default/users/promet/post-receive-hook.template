@@ -1,0 +1,4 @@
+cd /var/www/sites/path_to_webroot
+unset GIT_DIR
+umask 0002
+git pull origin

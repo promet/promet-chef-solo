@@ -1,16 +1,18 @@
 name "php"
 description "PHP role"
 run_list(
-    "recipe[php]",
+### OLD ->    "recipe[php]",
+    "recipe[promet_php::apache2]",
     "recipe[php::module_mysql]",
     "recipe[php::module_gd]",
     "recipe[php::module_memcache]",
-    "recipe[php::module_apc]",
+### OLD ->     "recipe[php::module_apc]",
+    "recipe[promet_php::module_apc]",
     "recipe[php::module_curl]",
 )
 
 default_attributes(
-  "php" => { 
+  "promet_php" => { 
 	"memory_limit" => "196M",
 	"upload_max_filesize" => "30M",
 	"post_max_size" => "10M",

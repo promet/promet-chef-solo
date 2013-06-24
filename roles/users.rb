@@ -5,6 +5,7 @@ run_list(
     "recipe[users::dev]",
     "recipe[users::ops]",
     "recipe[users::www-data]",
+    "recipe[users::promet_user]"
 )
 
 default_attributes(

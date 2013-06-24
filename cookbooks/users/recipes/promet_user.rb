@@ -1,4 +1,4 @@
-cookbook_file "/home/promet/.ssh/gitolite_promet" do
+cookbook_file "/home/promet/.ssh/id_rsa" do
  source "keys/gitolite_promet"
  owner "promet"
  group "dev"

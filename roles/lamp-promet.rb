@@ -5,7 +5,7 @@ run_list(
     "role[apache2]",
     "role[php]",
     "role[mysql_server]",
-    "role[monit]"
+    "role[newrelic]"
 )
 
 default_attributes(

@@ -8,6 +8,7 @@ run_list(
     "recipe[php::module_memcache]",
 ### OLD ->     "recipe[php::module_apc]",
     "recipe[promet_php::module_apc]",
+    "recipe[promet_php::module_mcrypt]",
     "recipe[php::module_curl]",
 )
 

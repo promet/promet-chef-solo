@@ -2,7 +2,8 @@ name "nagios-client"
 description "nagios client roles"
 run_list(
   "recipe[nagios]",
-  "recipe[nagios::client]"
+  "recipe[nagios::client]",
+  "recipe[nagios::base_monitoring]"
 )
 
 default_attributes(

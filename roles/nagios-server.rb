@@ -3,7 +3,8 @@ description "Nagios Monitoring server"
 run_list(
   "role[base]",
   "recipe[nagios]",
-  "recipe[nagios::server]"
+  "recipe[nagios::server]",
+  "recipe[nagios::base_monitoring]"
 )
 
 default_attributes(

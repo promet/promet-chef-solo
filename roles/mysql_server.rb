@@ -2,7 +2,7 @@ name "mysql_server"
 description "MySQL server role"
 run_list(
     "recipe[mysql::server]",
-#    "recipe[mysql::my_root]"
+    "recipe[mysql::my_root]"
 )
 default_attributes(
   :mysql => {

@@ -1,0 +1,5 @@
+{
+  "id": "swap",
+  "hostgroup_name": "linux",
+  "command_line": "$USER1$/check_swap -H $HOSTADDRESS$ -c check_swap -t 20"
+}

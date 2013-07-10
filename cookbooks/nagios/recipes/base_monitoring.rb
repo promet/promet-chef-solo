@@ -15,17 +15,19 @@ nagios_nrpecheck "check_load" do
   action :add
 end
 
-nagios_nrpecheck "check_swap" do
-  command "#{node['nagios']['plugin_dir']}/check_swap"
-  warning_condition "80%"
-  critical_condition "30%"
-  action :add
-end
+# Check Swap - Not comming back right now
+#nagios_nrpecheck "check_swap" do
+#  command "#{node['nagios']['plugin_dir']}/check_swap"
+#  warning_condition "80%"
+#  critical_condition "20%"
+#  parameters "-v"
+#  action :add
+#end
 
 # Check all non-NFS/tmp-fs disks.
 nagios_nrpecheck "check_all_disks" do
   command "#{node['nagios']['plugin_dir']}/check_disk"
-  warning_condition "8%"
+  warning_condition "10%"
   critical_condition "5%"
   parameters "-A -x /dev/shm -X nfs -i /boot"
   action :add

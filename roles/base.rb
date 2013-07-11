@@ -17,6 +17,7 @@ run_list(
     "recipe[sudo]",
     "role[postfix]",
     "role[users]",
+    "role[ssh_known_hosts]",
     "recipe[ntp]"
 )
 

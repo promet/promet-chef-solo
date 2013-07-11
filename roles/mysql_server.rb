@@ -7,6 +7,7 @@ run_list(
 default_attributes(
   :mysql => {
     :bind_address => "0.0.0.0",
+    :remove_anonymous_users => "true",
     :tunable => {
       :key_buffer => "256M",
       :table_cache => "4096",

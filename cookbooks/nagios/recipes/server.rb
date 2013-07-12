@@ -51,7 +51,7 @@ end
 # find nagios web interface users from the users data bag
 group = node['nagios']['users_databag_group']
 begin
-  sysadmins = search(:users, "groups:#{group}")
+  sysadmins = search(:users, "groups:#{group} NOT action:remove")
 rescue Net::HTTPServerException
   Chef::Log.fatal("Could not find appropriate items in the \"users\" databag.  Check to make sure there is a users databag and if you have set the \"users_databag_group\" that users in that group exist")
   raise 'Could not find appropriate items in the "users" databag.  Check to make sure there is a users databag and if you have set the "users_databag_group" that users in that group exist'
@@ -229,7 +229,7 @@ bash "Create SSL Certificates" do
   openssl req -subj "#{node['nagios']['ssl_req']}" -new -x509 -nodes -sha1 -days 3650 -key nagios-server.key > nagios-server.crt
   cat nagios-server.key nagios-server.crt > nagios-server.pem
   EOH
-  not_if { ::File.exists?("#{node['nagios']['conf_dir']}/certificates/nagios-server.pem") }
+  not_if { ::File.exists?("#{node['nagios']['ssl_cert_file']}") }
 end
 
 %w{ nagios cgi }.each do |conf|

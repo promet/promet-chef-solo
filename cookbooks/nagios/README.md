@@ -85,6 +85,8 @@ The following attributes are used for the Nagios server
 * `node['nagios']['run_dir']` - where pidfiles are stored, default "/var/run/nagios3"
 * `node['nagios']['docroot']` - Nagios webui docroot, default "/usr/share/nagios3/htdocs"
 * `node['nagios']['enable_ssl]` - boolean for whether Nagios web server should be https, default false
+* `node['nagios']['ssl_cert_file']` = Location of SSL Certificate File. default "/etc/nagios3/certificates/nagios-server.pem"
+* `node['nagios']['ssl_cert_key']`  = Location of SSL Certificate Key.  default "/etc/nagios3/certificates/nagios-server.pem"
 * `node['nagios']['http_port']` - port that the Apache server should listen on, determined whether ssl is enabled (443 if so, otherwise 80)
 * `node['nagios']['server_name']` - common name to use in a server cert, default "nagios"
 * `node['nagios']['ssl_req']` - info to use in a cert, default `/C=US/ST=Several/L=Locality/O=Example/OU=Operations/CN=#{node['nagios']['server_name']}/emailAddress=ops@#{node['nagios']['server_name']}`
@@ -108,7 +110,7 @@ The following attributes are used for the Nagios server
 * `node['nagios']['ldap_bind_password']` - bind password used with the DN provided for searcing ldap.
 * `node['nagios']['ldap_url']` - ldap url and search parameters.
 * `node['nagios']['ldap_authoritative']` - accepts "on" or "off". controls other authentication modules from authenticating the user if this one fails.
-* `node['nagios']['users_databag_group']` - users databag group considered Nagios admins.  defaults to sysadmins
+* `node['nagios']['users_databag_group']` - users databag group considered Nagios admins.  defaults to sysadmin
 * `node['nagios']['host_name_attribute']` - node attribute to use for naming the host. Must be unique across monitored nodes. Defaults to hostname
 * `node['nagios']['templates']`
 * `node['nagios']['interval_length']` - minimum interval.
@@ -172,7 +174,7 @@ Searches are confined to the node's `chef_environment` unless multi-environment 
 
 The recipe does the following:
 
-1. Searches for users in 'users' databag belonging to to 'sysadmins' group and authorizes them to access the Nagios web UI and receive notification e-mails.
+1. Searches for users in 'users' databag belonging to to 'sysadmin' group and authorizes them to access the Nagios web UI and receive notification e-mails.
 2. Searches all available roles/environments and builds a list which will become the Nagios hostgroups.
 3. Places nodes in Nagios hostgroups by role / environment membership.
 4. Installs various packages required for the server.

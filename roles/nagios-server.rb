@@ -14,7 +14,7 @@ default_attributes(
     "notifications_enabled" => "1",
     "users_databag_group" => "ops",
     "enable_ssl" => "true",
-    "server_name" => "monitoring-promet-rsc.promethost.com",
+    "server_name" => "nagios-rsc.promethost.com",
     "ssl_cert_file" => "/etc/nagios3/certificates/nagios-server.crt",
     "ssl_cert_key" => "/etc/nagios3/certificates/nagios-server.key"
 #node['nagios']['ssl_cert_file'] = Location of SSL Certificate File. default "/etc/nagios3/certificates/nagios-server.pem"

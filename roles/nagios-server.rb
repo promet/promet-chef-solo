@@ -11,7 +11,7 @@ default_attributes(
   "nagios" => { 
     "server_auth_method" => "htauth",
     "server_role" => "nagios-server",
-    "notifications_enabled" => "1",
+    "notifications_enabled" => "0",
     "users_databag_group" => "ops",
     "enable_ssl" => "true",
     "server_name" => "nagios-rsc.promethost.com",

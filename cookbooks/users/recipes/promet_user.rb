@@ -14,5 +14,5 @@ git "/home/promet/scriptutils" do
    repository "git@git.promethost.com:scriptutils.git"
    user "promet"
    group "dev"
-   action :checkout
+   action :sync
 end

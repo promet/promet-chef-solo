@@ -7,7 +7,8 @@ run_list(
     "recipe[apache2::mod_rewrite]",
     "recipe[apache2::mod_expires]",
     "recipe[apache2::mod_deflate]",
-    "recipe[apache2::mod_status]"
+    "recipe[apache2::mod_status]",
+    "recipe[apache2::mod_headers]"
 )
 
 default_attributes(
@@ -16,6 +17,7 @@ default_attributes(
     :listen_ports => ["80", "443"],
     :traceenable => "Off",
     :serversignature => "Off",
+    :default_site_enabled => "false",
     :servertokens => "Prod",
     :timeout => 15,
     :prefork => {

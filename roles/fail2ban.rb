@@ -1,7 +1,7 @@
 name "fail2ban"
 description "Fail2Ban config"
 run_list(
-    "recipe[fail2ban]",
+    "recipe[fail2ban]"
 )
 
 default_attributes(

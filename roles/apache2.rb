@@ -7,11 +7,12 @@ run_list(
     "recipe[apache2::mod_rewrite]",
     "recipe[apache2::mod_expires]",
     "recipe[apache2::mod_deflate]",
-    "recipe[apache2::mod_status]",
+    "recipe[apache2::mod_status]"
 )
 
 default_attributes(
   :apache => {
+    :ext_status => "true",
     :listen_ports => ["80", "443"],
     :traceenable => "Off",
     :serversignature => "Off",

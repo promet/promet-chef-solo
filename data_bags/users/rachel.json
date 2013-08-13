@@ -4,7 +4,7 @@
   ],
   "comment": "Rachel Jaro",
   "id": "rachel",
-  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtc91gvtDa1ScQiALNuNjvCwmC/OH1lY3t8Vog3cC1RXgZj5nbcugEfE6wtm0tl/MyO4ZGyecgHqImxi+Hb7m9eVA66NVnqJspNhsK67XspPWlTPUbx4acLwsNm+TP2s+9aEd02RFxMqLFwPZK9UyygkX7bpfdPSfhUTvP6Q1mjovub5xPFCTU0/XZ9UWNLmfzNfxh6BWANVrSh18IOQk0Ih1bourIKq9xTBQbJ9dMIbRrN09CES+PRnE9YZ1B0Lt9X+yIQ+7y96y86Dgx4GxFXQOsgG7iMOI5yFuSRzd4ayJWBwBO8p2O7kwU0Eemh1fIhOU1YvTswUnRDKCnTt7N rachel@petixe.com",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCaVEWDhexgdO00On/LR8tJ/PYCmX9Wk/O25fIEa7qRyAti4ihVQ/z/0RifRw1y9fGEiPoAoo1Os9EHndwBxnKiYHfZ++C2eJygm9pREOAwj15McUGQZ2sc3DQnRzIDDt6xeL2wn1UL9rHEjX33O1UqepCWqabXXeO50BPaf7JO7Y0ak8xVA0A3cPWNM2EVnZKlWd9ZU0yWo56/Mp8/ix8cPjTMJohtN1EMjWaCMajJgN6T8aW1qcHGzx7OLKIV9MJ2wI8tRNqW3PDMlCs4W5EzXEkjGNKzYasaLVxILuY8lK8xUMbixnf0Y5iKA5ZdNLApKyAfZHUU5fgopb6wz5HV rachel@emo.local",
   "password": "$1$d9U/oMGh$HRJ.0Th3SISYJboGYQcb71",
 "shell": "/bin/bash"
 }

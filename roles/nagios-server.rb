@@ -4,6 +4,7 @@ run_list(
   "role[base]",
   "recipe[nagios]",
   "recipe[nagios::server]",
+  "recipe[nagios::pagerduty]",
   "recipe[nagios::base_monitoring]"
 )
 
@@ -13,6 +14,7 @@ default_attributes(
     "server_role" => "nagios-server",
     "notifications_enabled" => "1",
     "users_databag_group" => "ops",
+    "pagerduty_key" => "Rbpz4jzm3AVhH6Zsa3Kt",
     "enable_ssl" => "true",
     "server_name" => "nagios-rsc.promethost.com",
     "default_host" => {

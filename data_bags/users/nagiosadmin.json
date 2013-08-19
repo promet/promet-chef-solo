@@ -3,7 +3,7 @@
   "groups": "ops",
   "htpasswd": "{SHA}26EtrruJDKnNxG8PqQn02TmEvbc=",
   "nagios": {
-    "pager": "greg@promethost.com",
-    "email": "greg@promethost.com"
+    "pager": "sysadmins@promethost.com",
+    "email": "sysadmins@promethost.com"
   }
 }

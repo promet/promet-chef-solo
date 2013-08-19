@@ -1,6 +1,7 @@
 {
   "groups": [
-    "dev"
+    "dev",
+    "ops"
   ],
   "comment": "Michelle Krejci",
   "id": "michelle",

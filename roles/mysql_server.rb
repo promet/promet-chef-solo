@@ -11,6 +11,7 @@ default_attributes(
     :tunable => {
       :key_buffer => "256M",
       :table_cache => "4096",
+      :connect_timeout => "30",
       :query_cache_size => "128M",
       :max_heap_table_size => "128M"
     }

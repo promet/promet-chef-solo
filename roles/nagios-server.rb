@@ -17,6 +17,7 @@ default_attributes(
     "pagerduty_key" => "Rbpz4jzm3AVhH6Zsa3Kt",
     "enable_ssl" => "true",
     "server_name" => "nagios-rsc.promethost.com",
+    "additional_contacts" => { "pagerduty" => "true" },
     "default_host" => {
     	"check_interval" => "60",
     	"retry_interval" => "20",

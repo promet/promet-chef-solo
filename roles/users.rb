@@ -9,10 +9,4 @@ run_list(
 )
 
 default_attributes(
-  "authorization" => {
-    "sudo" => {
-      "groups" => ["ops"],
-      "passwordless" => true
-    }
-  }
 )

@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: users
-# Recipe:: sysadmins
+# Recipe:: dev
 #
 # Copyright 2011, Eric G. Wolfe
 # Copyright 2009-2011, Opscode, Inc.
@@ -23,4 +23,12 @@
 users_manage "dev" do
   group_id 2400
   action [ :remove, :create ]
+end
+
+sudo "dev" do
+  user "%dev"
+  runas "all"
+  host "ALL"
+  commands ["/usr/local/bin/drush", "/usr/bin/drush", "/bin/tar", "/usr/bin/wget", "/usr/bin/git"]
+  nopasswd true
 end

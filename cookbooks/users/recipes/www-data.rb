@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: users
-# Recipe:: sysadmins
+# Recipe:: www-data
 #
 # Copyright 2011, Eric G. Wolfe
 # Copyright 2009-2011, Opscode, Inc.

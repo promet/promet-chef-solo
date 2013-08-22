@@ -1,6 +1,7 @@
 {
   "groups": [
-    "dev"
+    "dev",
+    "www-data"
   ],
   "comment": "Arnold French",
   "id": "arnold",

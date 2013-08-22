@@ -1,6 +1,7 @@
 {
   "groups": [
-    "dev"
+    "dev",
+    "www-data"
   ],
   "comment": "Junico Aranco",
   "id": "junico",

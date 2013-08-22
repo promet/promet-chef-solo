@@ -1,6 +1,7 @@
 {
   "groups": [
-    "dev"
+    "dev",
+    "www-data"
   ],
   "comment": "Sarah Jeanne Tillo",
   "id": "sarah",

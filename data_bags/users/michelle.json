@@ -1,6 +1,7 @@
 {
   "groups": [
     "dev",
+    "www-data",
     "ops"
   ],
   "comment": "Michelle Krejci",

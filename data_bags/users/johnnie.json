@@ -1,6 +1,7 @@
 {
   "groups": [
     "dev",
+    "ops",
     "www-data"
   ],
   "comment": "Johnnie Fox",

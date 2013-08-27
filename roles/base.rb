@@ -13,6 +13,7 @@ run_list(
     "recipe[tmux]",
     "recipe[git]",
     "role[chef-client]",
+    "recipe[chef_gem]",
     "recipe[chef_gem::ruby-shadow]",
     "role[sudo]",
     "role[users]",

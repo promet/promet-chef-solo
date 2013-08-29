@@ -23,4 +23,7 @@ run_list(
 )
 
 default_attributes(
+  "build_essential" => {
+    "compiletime" => true
+  }
 )

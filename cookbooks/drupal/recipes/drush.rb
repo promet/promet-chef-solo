@@ -18,33 +18,13 @@
 # limitations under the License.
 #
 
-include_recipe %w{php php::module_mysql php::module_gd}
+# This should probably be a list of the modules that are needed.
+#require 'php'
 
-remote_file "#{node['drupal']['src']}/drush-#{node['drupal']['drush']['version']}.tar.gz" do
-  checksum node['drupal']['drush']['checksum']
-  source "http://ftp.drupal.org/files/projects/drush-#{node['drupal']['drush']['version']}.tar.gz"
-  mode "0644"
+pear_channel = php_pear_channel "pear.drush.org" do
+  action :discover
 end
-
-directory node['drupal']['drush']['dir'] do
-  owner "root"
-  group "root"
-  mode "0755"
-  action :create
+php_pear "drush" do
+  channel pear_channel.channel_name
+  action :install
 end
-
-execute "untar-drush" do
-  cwd node['drupal']['drush']['dir']
-  command "tar --strip-components 1 -xzf #{node['drupal']['src']}/drush-#{node['drupal']['drush']['version']}.tar.gz"
-  not_if "/usr/local/bin/drush status drush-version --pipe | grep #{node['drupal']['drush']['version']}"
-end
-
-link "/usr/local/bin/drush" do
-  to "#{node['drupal']['drush']['dir']}/drush"
-end
-
-#execute "install-drush-make" do
-#  cwd node['drupal']['drush']['dir']
-#  command "/usr/local/bin/drush dl drush_make"
-#  not_if { File.directory?("/root/.drush/drush_make")}
-#end

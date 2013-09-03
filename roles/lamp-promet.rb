@@ -6,7 +6,6 @@ run_list(
     "role[php]",
     "role[mysql_server]",
     "role[nagios-client]",
-    "role[newrelic]"
 )
 
 default_attributes(

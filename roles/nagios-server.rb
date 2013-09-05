@@ -13,6 +13,7 @@ default_attributes(
     "server_auth_method" => "htauth",
     "server_role" => "nagios-server",
     "notifications_enabled" => "1",
+    "multi_environment_monitoring" => "true",
     "users_databag_group" => "ops",
     "pagerduty_key" => "Rbpz4jzm3AVhH6Zsa3Kt",
     "enable_ssl" => "true",

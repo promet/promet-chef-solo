@@ -44,7 +44,6 @@
     "chef-client": "= 2.2.4",
     "build-essential": "= 1.4.0",
     "bluepill": "= 2.2.2",
-    "bacula": "= 1.1.1",
     "aws": "= 0.101.2",
     "automysqlbackup": "= 0.0.9",
     "apt": "= 2.1.0",

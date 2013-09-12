@@ -11,5 +11,10 @@ override_attributes(
        "query_cache_limit" => '4M',
        "query_cache_size" => '196M' },
     "data_dir" => 
-	"/var/www/mysql" }
+	"/var/www/mysql" },
+  "promet_php" => 
+   { "apc" => 
+     { "shm_size" => '128M'
+     }
+   }
 )

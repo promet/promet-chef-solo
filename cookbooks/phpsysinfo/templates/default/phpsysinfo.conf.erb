@@ -1,26 +1,12 @@
 # phpsysinfo default Apache configuration
 
-Alias /phpsysinfo /some/node/dir # Attribute this
-
-<Directory /attribute/dir > # Attribute this
+<Directory /var/www/promet > 
 	Options FollowSymLinks
 	DirectoryIndex index.php
-
-	<IfModule mod_php5.c>
-		AddType application/x-httpd-php .php
-		php_flag magic_quotes_gpc Off
-		php_flag track_vars On
-		php_flag register_globals Off
-		php_value include_path .
-	</IfModule>
-</Directory>
-
-# Authorize for setup
-<Directory /usr/share/phpmyadmin/setup> # Attribute here
-    <IfModule mod_authn_file.c>
-    AuthType Basic
-    AuthName "phpsysinfo access"
-    AuthUserFile /etc/phpmyadmin/htpasswd.setup # Attribute here
-    </IfModule>
-    Require valid-user
+	AllowOverride All
+        Order deny,Allow
+        AuthType Basic
+        AuthName "phpsysinfo access"
+        AuthUserFile /var/www/promet/.htpasswd
+        Require valid-user
 </Directory>

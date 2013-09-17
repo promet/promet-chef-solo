@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "Timothy Escopete",
+  "id": "timothy",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDndd6oB/lGT6MwrLnElJ1pc990ozWN9IoJzAAOOkpBkLEzFGz+It9stPLFe3fVhzl/4DFfCETMI6t0AoTGyROEfQvTo+peWvpkpW+x+tsJqu0BXIU7RT37Eczo5hF+LMd08++KSyw9ZGAiRlvhV7t77PUyEoIJHzQ6lquugyuz7BJvXLe23HjPaLcn9DD2AJa5Q76Q1f4mKNzaiHmHAvFVvDpPty/y7wFT/HrWvKJPklm/2OPfv+s+IbmK0uSSGyzYOeoNHV152A4+6pAPWJWh9Rvdy6cX7rgmhZl5HRZDjknhcjQROwnpp9RlWWWq2AcmZIcvuNVlXYX0N4d2k2TD timothy@Timothys-MacBook-Pro.local",
+  "password": "$1$VzcOHmMl$8LH0nXOX79Sy.q3lh8tPp0",
+"shell": "/bin/bash"
+}

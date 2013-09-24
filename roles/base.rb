@@ -21,9 +21,14 @@ run_list(
     "role[ssh_known_hosts]",
     "recipe[ntp]"
 )
-
+#default['openssh']['server']['subsystem']
 default_attributes(
   "build_essential" => {
     "compiletime" => true
+  },
+  "openssh" => {
+    "server" => {
+      "subsystem" => "sftp /usr/lib/openssh/sftp-server"
+    }
   }
 )

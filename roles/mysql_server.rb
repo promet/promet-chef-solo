@@ -2,6 +2,7 @@ name "mysql_server"
 description "MySQL server role"
 run_list(
     "recipe[mysql::server]",
+    "recipe[promet-tools::mytop]",
     "recipe[mysql::my_root]"
 )
 default_attributes(

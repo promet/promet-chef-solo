@@ -19,6 +19,8 @@ run_list(
     "role[users]",
     "role[postfix]",
     "role[ssh_known_hosts]",
+    "recipe[promet-tools]",
+    "recipe[promet-tools::gregwants]",
     "recipe[ntp]"
 )
 #default['openssh']['server']['subsystem']

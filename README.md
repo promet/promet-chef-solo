@@ -60,6 +60,73 @@ The second config file, `.chef/knife.rb` is a repository specific configuration 
 
 http://help.opscode.com/faqs/chefbasics/knife
 
+Working With Servers
+====================
+
+### Creating Rackspace Servers
+
+Creating rackspace servers requires the knife gem extention:
+
+````
+gem install knife-rackspace
+````
+
+Addtionally, you will need the API credentials added to your knife.rb file:
+
+````
+# Promet Rackspace:
+knife[:rackpace_auth_url] = "https://identity.api.rackspacecloud.com/v2.0"
+knife[:rackspace_version] = "v2"
+knife[:rackspace_api_key] = "somealphanumericstring"
+knife[:rackspace_api_username] = "someaccountname"
+knife[:rackspace_compute_url] = "https://ord.servers.api.rackspacecloud.com/v2"
+````
+
+##### Debian 6
+````
+knife rackspace server create -r 'role[drupal]' -E dev -I 92a28e50-181d-4fc7-a071-567d26fc95f6 -f 4 -N chef11-promet-rsc.promethost.com -S chef11-promet-rsc.promethost.com
+````
+
+##### Debian 7
+````
+knife rackspace server create -r 'role[drupal]' -E dev -I f9a2ad96-355a-4696-a8f9-58d210050e59 -f 4 -N chef11-promet-rsc.promethost.com -S chef11-promet-rsc.promethost.com
+````
+
+##### Ubuntu 12
+
+````
+knife rackspace server create -r 'role[drupal]' -E dev -I e4dbdba7-b2a4-4ee5-8e8f-4595b6d694ce -f 4 -N chef11-promet-rsc.promethost.com -S chef11-promet-rsc.promethost.com
+````
+
+
+##### Ubuntu 13
+````
+knife rackspace server create -r 'role[drupal]' -E dev -I ba67f3fe-eb40-4428-b5a4-a7e1b2615cf7 -f 4 -N chef11-promet-rsc.promethost.com -S chef11-promet-rsc.promethost.com
+````
+
+### Creating AWS Instances
+
+The implementation of EC2 instances takes a bit different config.  Contact the sysadmins to get your hands on the necessary keys and credentials for your knife.rb file.
+
+````
+gem install knife-ec2
+````
+
+````
+# Promet AWS:
+knife[:aws_access_key_id] = "youraccesskeyid"
+knife[:aws_secret_access_key] = "youralphanumerickeystring"
+````
+
+##### Debian 6
+
+We have created a custom AMI on our promet account to use.  The AMI shown in this example will not work outside of Promet! 
+
+````
+knife ec2 server create -r 'role[drupal]' -E _default -I ami-5236ab62 -f m1.small -x root -i .chef/ops-uswest2.pem -G Ops -S ops-uswest2 -N chef11-promet-rsc.promethost.com -Z us-west-2a --region us-west-2
+````
+
+
 Next Steps
 ==========
 

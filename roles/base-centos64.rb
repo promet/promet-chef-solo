@@ -2,8 +2,9 @@ name "base-centos64"
 description "Base Promet Role"
 run_list(
     "recipe[yum]",
+    "recipe[yum::epel]",
     "recipe[logrotate]",
-    "recipe[build-essential]",
+#    "recipe[build-essential]",
     "role[logwatch]",
     "recipe[openssh]",
     "recipe[vim]",
@@ -19,7 +20,6 @@ run_list(
     "role[users]",
    # "role[postfix]",
     "role[ssh_known_hosts]",
-   # "recipe[promet-tools]",
    # "recipe[promet-tools::gregwants]",
     "recipe[ntp]"
 )

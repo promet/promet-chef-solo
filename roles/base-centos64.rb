@@ -4,7 +4,7 @@ run_list(
     "recipe[yum]",
     "recipe[yum::epel]",
     "recipe[logrotate]",
-#    "recipe[build-essential]",
+    "recipe[build-essential]",
     "role[logwatch]",
     "recipe[openssh]",
     "recipe[vim]",
@@ -18,12 +18,11 @@ run_list(
     "recipe[chef_gem::ruby-shadow]",
     "role[sudo]",
     "role[users]",
-   # "role[postfix]",
+    "role[postfix]",
     "role[ssh_known_hosts]",
    # "recipe[promet-tools::gregwants]",
     "recipe[ntp]"
 )
-#default['openssh']['server']['subsystem']
 default_attributes(
   "openssh" => {
     "server" => {

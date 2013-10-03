@@ -2,6 +2,7 @@ name "base-centos64"
 description "Base Promet Role"
 run_list(
     "recipe[yum]",
+    "recipe[yum::epel]",
     "recipe[logrotate]",
     "recipe[build-essential]",
     "role[logwatch]",
@@ -17,13 +18,11 @@ run_list(
     "recipe[chef_gem::ruby-shadow]",
     "role[sudo]",
     "role[users]",
-   # "role[postfix]",
+    "role[postfix]",
     "role[ssh_known_hosts]",
-   # "recipe[promet-tools]",
    # "recipe[promet-tools::gregwants]",
     "recipe[ntp]"
 )
-#default['openssh']['server']['subsystem']
 default_attributes(
   "openssh" => {
     "server" => {

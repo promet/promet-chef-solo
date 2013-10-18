@@ -34,7 +34,7 @@
     "logwatch": "= 1.0.2",
     "logrotate": "= 1.2.0",
     "git": "= 2.5.2",
-    "fail2ban": "= 1.2.0",
+    "fail2ban": "= 1.2.4",
     "drupal": "= 1.1.2",
     "dmg": "= 1.1.0",
     "database": "= 1.4.0",

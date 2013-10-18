@@ -1,7 +1,7 @@
 Description
 ===========
 
-Installs and configures `fail2ban`, a utility that watches logs for failed login attempts 
+Installs and configures `fail2ban`, a utility that watches logs for failed login attempts
 and blocks repeat offenders with firewall rules.  On Redhat systems this cookbook will
 enable the EPEL repository in order to retrieve the fail2ban package.
 
@@ -29,13 +29,23 @@ Recipes
 default
 -------
 
-Installs the fail2ban package, manages 2 templates: `/etc/fail2ban/fail2ban.conf` 
+Installs the fail2ban package, manages 2 templates: `/etc/fail2ban/fail2ban.conf`
 and `/etc/fail2ban/jail.conf`, and manages the fail2ban service.
 
 Usage
 =====
 
 Typically, include `recipe[fail2ban]` in a base role applied to all nodes.
+
+Particular those related to rsyslog
+=====
+
+If you are using rsyslog parameter "$RepeatedMsgReduction on" in rsyslog.conf file
+then you can get "Last message repeated N times" in system log file (for example auth.log).
+And it will affect the work of fail2ban, so that fail2ban will not work because the internal counter maxretry will not extend their
+Then you can change parameter "$RepeatedMsgReduction off" in rsyslog.conf file for maximum accuracy of maximum failed login attempts
+
+This rsyslog parameter is default ON for ubuntu 12.04 LTS for example.
 
 License and Author
 ==================

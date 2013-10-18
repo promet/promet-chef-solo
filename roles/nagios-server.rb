@@ -15,7 +15,7 @@ default_attributes(
     "notifications_enabled" => "1",
     "multi_environment_monitoring" => "true",
     "users_databag_group" => "ops",
-    "pagerduty_key" => "Rbpz4jzm3AVhH6Zsa3Kt",
+    "pagerduty_key" => "f4cebb41ca874a7090db0ade3ba52703",
     "enable_ssl" => "true",
     "server_name" => "nagios-rsc.promethost.com",
     "additional_contacts" => { "pagerduty" => "true" },

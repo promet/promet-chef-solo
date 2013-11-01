@@ -1,6 +1,6 @@
 {
   "groups": [
-    "ops",
+    "sysadmin",
     "dev",
     "www-data"
   ],

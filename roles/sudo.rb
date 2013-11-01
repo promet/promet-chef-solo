@@ -7,7 +7,7 @@ run_list(
 default_attributes(
   "authorization" => {
     "sudo" => {
-      "groups" => ["ops"],
+      "groups" => ["ops","sysadmin"],
       "include_sudoers_d" => true,
       "passwordless" => true
     }

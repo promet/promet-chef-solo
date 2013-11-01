@@ -2,7 +2,7 @@
   "groups": [
     "dev",
     "www-data",
-    "ops"
+    "sysadmin"
   ],
   "comment": "Michelle Krejci",
   "id": "michelle",

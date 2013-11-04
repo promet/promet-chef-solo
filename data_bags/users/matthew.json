@@ -1,7 +1,6 @@
 {
   "groups": [
     "dev",
-    "ops",
     "www-data"
   ],
   "comment": "Matthew Gilboy",

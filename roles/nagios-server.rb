@@ -16,19 +16,18 @@ default_attributes(
     "sysadmin_email" => "sysadmins@prometsource.com",
     "multi_environment_monitoring" => "true",
     "users_databag_group" => "ops",
-    #"pagerduty_key" => "f4cebb41ca874a7090db0ade3ba52703",
     "pagerduty_key" => "7cec8fd0e7c5012e5abc12313d009e57",
     "enable_ssl" => "true",
     "server_name" => "nagios-rsc.promethost.com",
     "additional_contacts" => { "pagerduty" => "true" },
     "default_host" => {
-    	"check_interval" => "60",
-    	"retry_interval" => "20",
+    	"check_interval" => "180",
+    	"retry_interval" => "60",
     	"max_check_attempts" => "3"
     	},
     "default_service" => {
-    	"check_interval" => "60",
-    	"retry_interval" => "20",
+    	"check_interval" => "180",
+    	"retry_interval" => "60",
     	"max_check_attempts" => "3"
 	},
     "ssl_cert_file" => "/etc/nagios3/certificates/nagios-server.crt",

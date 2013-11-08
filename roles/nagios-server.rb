@@ -30,8 +30,12 @@ default_attributes(
     	"check_interval" => "600",
     	"retry_interval" => "300",
     	"max_check_attempts" => "3",
-	"notification_options" => "u,c"
+        "notification_options" => "c,u,r"
 	},
+    "pagerduty" => {
+        "host_notification_options" => "d,r",
+        "service_notification_options" => "u,c,r"
+        },
     "ssl_cert_file" => "/etc/nagios3/certificates/nagios-server.crt",
     "ssl_cert_key" => "/etc/nagios3/certificates/nagios-server.key"
 #node['nagios']['ssl_cert_file'] = Location of SSL Certificate File. default "/etc/nagios3/certificates/nagios-server.pem"

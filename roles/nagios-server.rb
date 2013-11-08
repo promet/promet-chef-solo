@@ -21,13 +21,13 @@ default_attributes(
     "server_name" => "nagios-rsc.promethost.com",
     "additional_contacts" => { "pagerduty" => "true" },
     "default_host" => {
-    	"check_interval" => "180",
-    	"retry_interval" => "60",
+    	"check_interval" => "600",
+    	"retry_interval" => "300",
     	"max_check_attempts" => "3"
     	},
     "default_service" => {
-    	"check_interval" => "180",
-    	"retry_interval" => "60",
+    	"check_interval" => "600",
+    	"retry_interval" => "300",
     	"max_check_attempts" => "3"
 	},
     "ssl_cert_file" => "/etc/nagios3/certificates/nagios-server.crt",

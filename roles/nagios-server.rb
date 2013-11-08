@@ -30,7 +30,7 @@ default_attributes(
     	"check_interval" => "600",
     	"retry_interval" => "300",
     	"max_check_attempts" => "3",
-	"notification_options" => "d,u,r"
+	"notification_options" => "u,c"
 	},
     "ssl_cert_file" => "/etc/nagios3/certificates/nagios-server.crt",
     "ssl_cert_key" => "/etc/nagios3/certificates/nagios-server.key"

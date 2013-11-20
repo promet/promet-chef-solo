@@ -6,7 +6,7 @@ run_list(
 override_attributes(
   "promet_php" => {
     "apc" => {
-      "shm_size" => '192M'
+      "shm_size" => '128M'
     },
     "memory_limit" => "256M",
     "upload_max_filesize" => "50M",

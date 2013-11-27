@@ -21,14 +21,14 @@ default_attributes(
     "server_name" => "nagios-rsc.promethost.com",
     "additional_contacts" => { "pagerduty" => "true" },
     "default_host" => {
-    	"check_interval" => "300",
-    	"retry_interval" => "180",
+    	"check_interval" => "600",
+    	"retry_interval" => "300",
     	"max_check_attempts" => "3",
 	"notification_options" => "d,u,r"
     	},
     "default_service" => {
-    	"check_interval" => "300",
-    	"retry_interval" => "180",
+    	"check_interval" => "600",
+    	"retry_interval" => "300",
     	"max_check_attempts" => "3",
         "notification_options" => "c,u,r"
 	},

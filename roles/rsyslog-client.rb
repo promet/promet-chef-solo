@@ -7,5 +7,7 @@ run_list(
 
 default_attributes(
     :rsyslog => {  :server_search => "role:rsyslog-server",
+		   :high_precision_timestamps => "on",
+		   :preserve_fqdn => "on",
 		   :logs_to_forward => "*.*" }
 )

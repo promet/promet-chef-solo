@@ -8,7 +8,8 @@ run_list(
 default_attributes(
     :rsyslog => { :server => "true",
      		  :log_dir => "/srv/logs",
+     		  :preserve_fqdn => "on",
      		  :server_search => "role:rsyslog-server",
-     		  :"per_host_dir" => "%HOSTNAME%"
+     		  :per_host_dir => "%HOSTNAME%"
       }
 )

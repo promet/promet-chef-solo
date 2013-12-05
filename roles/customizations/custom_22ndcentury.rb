@@ -14,7 +14,7 @@ override_attributes(
      },
    "promet_php" => 
      { "apc" => 
-       { "shm_size" => '128M'
+       { "shm_size" => '192M'
        },
      "memory_limit" => "512M",
    }

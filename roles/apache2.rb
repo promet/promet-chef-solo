@@ -17,7 +17,6 @@ default_attributes(
     :listen_ports => ["80", "443"],
     :traceenable => "Off",
     :serversignature => "Off",
-    :default_site_enabled => "false",
     :servertokens => "Prod",
     :timeout => 15,
     :prefork => {

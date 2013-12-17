@@ -27,8 +27,8 @@ end
 
 sudo "dev" do
   user "%dev"
-  runas "all"
+  runas "ALL"
   host "ALL"
-  commands ["/usr/local/bin/drush", "/usr/bin/drush", "/bin/tar", "/usr/bin/wget", "/usr/bin/git"]
+  commands ["/usr/local/bin/drush", "/usr/bin/drush", "/bin/tar", "/usr/bin/wget", "/usr/bin/git", "/bin/cp", "/bin/mv", "/bin/chown", "/bin/chmod"]
   nopasswd true
 end

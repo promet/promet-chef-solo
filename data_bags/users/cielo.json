@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "Cielo Johnson",
+  "id": "cielo",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCiKM+gmETuLhT5vC5hUt0pEsU7/Mf8RcIQAbWuqydsll3ixChE6V753Cl1Y5MgsQb3uG3+rP6K6wFQCk9KyNrJyGpZMLZ6hcPhAG0DxrpCsK0ngUF8PvUQ7R1Ou/+EbeLtOenAbyL4fFDiusjuN+4uhGo4ry9Z5BqpUGCVPC5G85UxuQiBMFKf3DQLOOEil+kJD/2nKvq+8OA+sBga1B4gUa6S2yGvUJFzYa8Hf+/vXuxaR7MhFVB58Je+cGeMB8ZPhAeRC1LZlWJjc0fnO0Jn4jTjw4rqq6nKFicdQlHq3eOp7+zGEyGgzdk7PTM8Y8PVMfRdph1b/AlWpTer6V5z quickstart@qs10",
+  "password": "$1$.EzoH0ja$AnKe62pyBhGUPJV9MVwGq1",
+"shell": "/bin/bash"
+}

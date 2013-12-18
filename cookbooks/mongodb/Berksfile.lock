@@ -1,0 +1,22 @@
+{
+  "sources": {
+    "mongodb": {
+      "path": "."
+    },
+    "apt": {
+      "locked_version": "2.3.0"
+    },
+    "python": {
+      "locked_version": "1.4.4"
+    },
+    "build-essential": {
+      "locked_version": "1.4.2"
+    },
+    "yum": {
+      "locked_version": "2.4.2"
+    },
+    "runit": {
+      "locked_version": "1.4.0"
+    }
+  }
+}

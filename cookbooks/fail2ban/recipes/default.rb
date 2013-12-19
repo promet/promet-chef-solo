@@ -18,34 +18,35 @@
 #
 
 # epel repository is needed for the fail2ban package on rhel
-if platform_family?("rhel")
-  include_recipe "yum::epel"
-end
+include_recipe 'yum-epel' if platform_family?('rhel')
 
-package "fail2ban" do
+package 'fail2ban' do
   action :upgrade
 end
 
-%w{ fail2ban jail }.each do |cfg|
-  template "/etc/fail2ban/#{cfg}.conf" do
-    source "#{cfg}.conf.erb"
-    owner "root"
-    group "root"
-    mode 0644
-    notifies :restart, "service[fail2ban]"
-    variables(
-      :auth_log => node['platform_family'] == 'rhel' ? "secure" : 'auth.log'
-    )
-  end
+template '/etc/fail2ban/fail2ban.conf' do
+  source 'fail2ban.conf.erb'
+  owner 'root'
+  group 'root'
+  mode 0644
+  notifies :restart, 'service[fail2ban]'
 end
 
-service "fail2ban" do
-  supports [ :status => true, :restart => true ]
-  action [ :enable, :start ]
+template '/etc/fail2ban/jail.local' do
+  source 'jail.conf.erb'
+  owner 'root'
+  group 'root'
+  mode 0644
+  notifies :restart, 'service[fail2ban]'
+end
 
-  if (platform?("ubuntu") && node["platform_version"].to_f < 12.04) ||
-     (platform?("debian") && node["platform_version"].to_f < 7)
-      # status command returns non-0 value only since fail2ban 0.8.6-3 (Debian)
-      status_command '/etc/init.d/fail2ban status | grep -q "is running"'
+service 'fail2ban' do
+  supports [:status => true, :restart => true]
+  action [:enable, :start]
+
+  if (platform?('ubuntu') && node['platform_version'].to_f < 12.04) ||
+      (platform?('debian') && node['platform_version'].to_f < 7)
+    # status command returns non-0 value only since fail2ban 0.8.6-3 (Debian)
+    status_command "/etc/init.d/fail2ban status | grep -q 'is running'"
   end
 end

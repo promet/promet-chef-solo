@@ -15,6 +15,7 @@ default_attributes(
 	"memory_limit" => "196M",
 	"upload_max_filesize" => "30M",
 	"post_max_size" => "10M",
+	"expose_php" => "Off",
 	"max_execution_time" => "300",
 	"max_input_time" => "300",
 	"realpath_cache_size" => "64k",

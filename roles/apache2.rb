@@ -22,7 +22,7 @@ default_attributes(
     :prefork => {
       :startservers => 10,
       :minspareservers => 10,
-      :maxspareservers => 24,
+      :maxspareservers => 10,
       :maxclients => 100,
       :maxrequestsperchild => 10000
     }

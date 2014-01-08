@@ -21,6 +21,7 @@ run_list(
     "role[ssh_known_hosts]",
     "recipe[promet-tools]",
     "recipe[promet-tools::gregwants]",
+    "role[newrelic]",
     "recipe[ntp]"
 )
 #default['openssh']['server']['subsystem']

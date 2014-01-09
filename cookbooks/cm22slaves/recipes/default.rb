@@ -18,7 +18,7 @@ node.cm22slave.sites.each do |machine_name, subdomain|
     repository  'git@github.com:promet/CM22Slave'
   end
 
-  script "update_cm22slave_site-#{machine_name}" do
+  bash "update_cm22slave_site-#{machine_name}" do
     user  'promet'
     cwd   root
     code  <<-SCRIPT

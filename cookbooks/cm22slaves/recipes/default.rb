@@ -10,9 +10,9 @@
 include_recipe 'git'
 
 node.cm22slave.sites.each do |machine_name, subdomain|
-  root = "/var/www/sites/twenty_second/#{subdomain}/src"
+  root = "/var/www/sites/twenty_second/#{subdomain}"
 
-  git root do
+  git "#{root}/src" do
     user        'promet'
     group       'www-data'
     repository  'git@github.com:promet/CM22Slave'

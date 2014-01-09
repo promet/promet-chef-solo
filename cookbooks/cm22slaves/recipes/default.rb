@@ -20,7 +20,7 @@ node.cm22slave.sites.each do |subdomain, machine_name|
 
   script "update_cm22slave_site-#{machine_name}" do
     user  'promet'
-    cwd   path
+    cwd   root
     code  <<-SCRIPT
     drush kw-b
     cd build

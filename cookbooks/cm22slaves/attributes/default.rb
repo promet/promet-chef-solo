@@ -1,5 +1,5 @@
 default['cm22slave']['sites'] = {
-  "the_orland_park_prairie" => "orlandparkprairie",
+  "the_orland_park_prairie" => "opprairie",
   "the_frankfort_station"   => "frankfortstation",
   "the_homer_horizon"       => "homerhorizon",
   "the_lockport_legend"     => "lockportlegend",

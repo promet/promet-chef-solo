@@ -14,7 +14,7 @@ override_attributes(
 	"/var/www/mysql" },
   "promet_php" => 
    { "apc" => 
-     { "shm_size" => '128M'
+     { "shm_size" => '128'
      }
    }
 )

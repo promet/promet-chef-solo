@@ -11,7 +11,7 @@ override_attributes(
     :checksum => '33da252e919715492769cdddb9c999080cfd84a0b432f10f197bc950cb02da09',
     :memory_limit => "256M",
     :upload_max_filesize => "50M",
-    :apc => { "shm_size" => "96M" }
+    :apc => { "shm_size" => "96" }
   }
 }
 )

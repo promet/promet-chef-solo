@@ -9,7 +9,7 @@
 
 include_recipe 'git'
 
-node.cm22slave.sites.each do |subdomain, machine_name|
+node.cm22slave.sites.each do |machine_name, subdomain|
   root = "/var/www/sites/#{subdomain}.prometdev.com"
 
   git root do

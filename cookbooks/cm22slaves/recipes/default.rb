@@ -25,7 +25,7 @@ node.cm22slave.sites.each do |machine_name, subdomain|
     drush kw-b
     cd build
     drush kw-id -y
-    drush vset 'oauth_slave_master_domain' 'http://corporate22cm.prometdev.com'
+    drush vset 'oauth_slave_master_domain' 'http://corporate22cm.prometstaging.com'
     drush cc-aic -y #{machine_name} dev
     drush kw-u
     SCRIPT

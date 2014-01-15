@@ -4,4 +4,8 @@
     action :remove
     ignore_failure true
   end
+  group "#{del_user}" do
+    action :remove
+    ignore_failure true
+  end
 end

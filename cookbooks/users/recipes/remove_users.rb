@@ -1,5 +1,5 @@
 # removing old users
-%w{ keith marius }.each do |del_user|
+%w{ brant chad ruoran scott dsblanes keith marius }.each do |del_user|
   user "#{del_user}" do
     action :remove
     ignore_failure true

@@ -9,6 +9,7 @@ run_list(
 
 default_attributes(
       'backup' => {
+        's3_bucket' => 'backup',
         'db_user' => 'backup',
         'db_password' => 'backup',
         'db_host' => 'localhost',

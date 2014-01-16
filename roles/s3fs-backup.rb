@@ -13,5 +13,6 @@ default_attributes(
         'db_user' => 'backup',
         'db_password' => 'backup',
         'db_host' => 'localhost',
+        'mailto' => 'sysadmin@prometsource.com',
         },
 )

@@ -106,6 +106,6 @@ node.cm22slaves.process.each do |machine_name|
     user    machine_user
     environment({'HOME' => home})
     cwd     root
-    command "#{root}/src/tools/update.sh"
+    command "#{root}/src/tools/update.sh #{machine_name}"
   end
 end

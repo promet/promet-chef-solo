@@ -32,7 +32,12 @@ default_attributes(
   },
   "openssh" => {
     "server" => {
-      "subsystem" => "sftp /usr/lib/openssh/sftp-server"
+      "subsystem" => "sftp /usr/lib/openssh/sftp-server",
+#      "password_authentication" => "no",
+      "permit_root_login" => "no"
+    },
+    "client " => {
+      "protocol" => "2"
     }
   }
 )

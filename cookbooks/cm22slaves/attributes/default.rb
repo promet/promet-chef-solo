@@ -12,7 +12,7 @@ default.cm22slaves.sites = {
   "the_winnetka_current"    => "winnetkacurrent",
   "malibu_surfside_news"    => "malibusurfsidenews"
 }
-default.cm22slaves.update = []
+default.cm22slaves.process = []
 default.cm22slaves.webroot = '/var/www/sites'
 default.cm22slaves.machine_user = 'www-data'
 default.cm22slaves.archive.source = 'https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22slave_20140121-195306.tar.gz'

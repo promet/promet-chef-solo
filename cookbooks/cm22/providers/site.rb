@@ -44,16 +44,14 @@ action :update do
 
   new_build = "#{root}/builds/#{build_id}"
 
-  execute "22cm_extract_#{subdomain}_#{build_id}" do
-    command "tar xzf #{cm22_archive} -C #{new_build} --strip-components=1"
-    action  :nothing
-  end
-
   directory new_build do
     owner machine_user
     group 'www-data'
-    not_if do ::File.exists? new_build end
-    notifies :run, "execute[22cm_extract_#{subdomain}_#{build_id}]", :immediately
+  end
+
+  execute "22cm_extract_#{subdomain}_#{build_id}" do
+    command "tar xzf #{cm22_archive} -C #{new_build} --strip-components=1"
+    not_if do ::File.exists? "#{new_build}/index.php" end
   end
 
   execute "kw-activate-#{subdomain}" do

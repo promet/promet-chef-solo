@@ -1,6 +1,6 @@
-name             'cm22slaves'
-maintainer       'YOUR_NAME'
-maintainer_email 'YOUR_EMAIL'
+name             'cm22'
+maintainer       'Will Milton'
+maintainer_email 'will@prometsource.com'
 license          'All rights reserved'
 description      'Installs/Configures cm22slaves'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))

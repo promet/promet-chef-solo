@@ -49,10 +49,15 @@
     "apt": "= 2.1.0",
     "apache2": "= 1.7.0"
   },
-  "json_class": "Chef::Environment",
-  "chef_type": "environment",
   "default_attributes": {
   },
   "override_attributes": {
+    "authorization": { 
+      "sudo": {
+        "groups": ["dev","ops","sysadmin"],
+        "include_sudoers_d":  "true",
+        "passwordless": "true"
+      }
+    }
   }
 }

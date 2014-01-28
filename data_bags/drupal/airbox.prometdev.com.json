@@ -1,0 +1,16 @@
+{
+  "id": "airbox-prometdev-com",
+  "databases": {
+    "default": {
+      "default": {
+        "username": "airboxdevDBA",
+        "database": "airboxdevDB",
+        "password": "airboxdevPASS",
+        "driver": "mysql",
+        "host": "localhost"
+      }
+    }
+  },
+  "uri": "airbox.prometdev.com",
+  "doc_root": "www"
+}

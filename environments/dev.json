@@ -60,7 +60,6 @@
       }
     },
     "cronapt": {
-      "mailto": "sysadmin@prometsource.com",
       "enable_upgrade": "true",
       "nightly": "true"
     }

@@ -61,7 +61,7 @@ action :update do
     command "drush kw-activate-build builds/#{build_id}"
   end
 
-  execute "install_cm22slave_site-#{subdomain}" do
+  execute "install_cm22_site-#{subdomain}" do
     user    machine_user
     environment({'HOME' => home})
     cwd     root
@@ -69,7 +69,7 @@ action :update do
     creates "#{root}/install.lock"
   end
 
-  execute "update_cm22slave_site-#{subdomain}" do
+  execute "update_cm22_site-#{subdomain}" do
     user    machine_user
     environment({'HOME' => home})
     cwd     root

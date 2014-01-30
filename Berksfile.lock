@@ -13,6 +13,11 @@
       "git": "git://github.com/promet/drupal_cookbook.git",
       "ref": "be8ee24e43151be5ddc25276dd20645e0990b93b"
     },
+    "composer": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/zircote/chef-composer.git",
+      "ref": "007912436c79f0b0c1f2d1732413ac42279811c2"
+    },
     "java": {
       "locked_version": "1.19.0"
     },

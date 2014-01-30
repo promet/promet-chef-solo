@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "Junico Aranco",
+  "id": "junico",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC16wEz2iiWrSAbE1hyc04r1tfZDnG5yWflZy80rFlYpjuAxAQo+XcU/pKyKQSNTLTdKv9foeDO5J1soaSgMo5Gs1uIOlZ7pT4O8uii/HLDzAOT+sNeOJfRfazAfF5Y5lSkNf+tCXN3cVPpBGYb3sKYz3VDV7v/3BdKJOIinPqdSCQ7waCBnzJOCZwlBTzt/bICvnuCMFJr3NcsCFrr9fYFQJkGamp+2QHgpbI6F4+pWzQNJxvNA0vWS9nEUw4eUke8G0SZnSv+hnwuGzLUN8sTj6LAN1UeluB+Mn2TLIrr1EUFJwnt6Q1Ntd1tWdu4naK4GeLz4PVmeamrTBzGRldz junico@junico",
+  "password": "$1$QPrANv5C$0Lm.zj0SCYG9hXivi8IIy.",
+"shell": "/bin/bash"
+}

@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "Carla Amante",
+  "id": "carla",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAlSPnt6f/lERiBm2/fVbAXHfOI9Tt2RMNUzRBfLlJAdQnofQeOXfL3CewBtyvYrjLyk9wpFuMpXGgTyIs5+F7u94Pi5f2IHq6WLlXSp7GgqXp89tUIo/gNWvG6V9LR83FnZZSXaZ+nlrzfFfVZxYiYKQ85TCuMl1QoNZvaZthguaRPDQcVcFuwEcrv6eIAyXnXhwQdvli+0ijlpi0rMXEThTAnudfTScxIztYql0bo9UcYfrY5J6Dbr9I2jcba7OZs3CPv6uuXIcWFOw7nNowMWCEfcqhFiz+S+3Mnqo2F9ElsXSvstktQBIHATj0mE2f5xhOn6xaedNwWu1hObvezw== carla@promethost.com",
+  "password": "$1$SggKL/pv$RIU9s1zRzCrgii85ic1OX1",
+"shell": "/bin/bash"
+}

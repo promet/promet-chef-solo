@@ -1,0 +1,16 @@
+{
+  "id": "cm22slave",
+  "databases": {
+    "default": {
+      "default": {
+        "username": "cm22slaveDBA",
+        "database": "cm22slaveDB",
+        "password": "cm22slavePASS",
+        "driver": "mysql",
+        "host": "localhost"
+      }
+    }
+  },
+  "uri": "cm22slave.dev",
+  "doc_root": "build"
+}

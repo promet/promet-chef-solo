@@ -8,15 +8,38 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "promet_wheezy"
   config.ssh.forward_agent = true
   config.vm.provision :chef_solo do |chef|
+    chef.data_bags_path = 'test/fixtures/dbags'
+    chef.roles_path = 'test/fixtures/roles'
+    chef.add_recipe 'test_cm22'
+    chef.add_role 'db_master'
+    chef.add_recipe 'drupal'
     chef.add_recipe 'cm22'
     chef.json = {
+      'mysql' => {
+        'server_debian_password' => 'pass',
+        'server_root_password' => 'pass',
+        'server_repl_password' => 'pass'
+      },
       'cm22' => {
-        'machine_user' => 'vagrant',
+        'machine_user' => 'promet',
+        'webroot' => '/var/www/sites',
         'slave' => {
-          'process' => [ 'publication22cm' ]
+          'process' => [ 'publication22cm' ],
+          'sites' => {
+            'publication22cm' => 'publication22cm'
+          },
+          'git_ref' => 'settings-compile',
+          'archive' => {
+            'source' => 'https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22slave_20140130-012659.tar.gz'
+          }
         },
         'master' => {
-          'process' => [ 'corporate.prometstaging.com' ]
+          'sites' => ['corporate22cm'],
+          'process' => [ 'corporate22cm' ],
+          'git_ref' => 'settings-compile',
+          'archive' => {
+            'source' => 'https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22master_20140129-233500.tar.gz'
+          }
         }
       }
     }

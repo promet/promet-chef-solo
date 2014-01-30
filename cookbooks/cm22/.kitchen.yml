@@ -1,0 +1,46 @@
+---
+driver_plugin: vagrant
+driver_config:
+  require_chef_omnibus: true
+  customize:
+    memory: 4096
+    cpuexecutioncap: 50
+
+platforms:
+  - name: debian-7.2.0
+
+suites:
+  - name: default
+    run_list:
+      - recipe[test_cm22]
+      - role[db_master]
+      - recipe[drupal]
+      - recipe[cm22]
+    roles_path: test/fixtures/roles
+    data_bags_path: test/fixtures/dbags
+    attributes:
+      mysql:
+        server_debian_password: pass
+        server_root_password: pass
+        server_repl_password: pass
+      cm22:
+        machine_user: promet
+        webroot: /var/www/sites
+        slave:
+          sites:
+            publication22cm: publication22cm
+          process:
+            - publication22cm
+          git_ref: settings-compile
+          archive:
+            source:
+              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22slave_20140127-234321.tar.gz
+        master:
+          sites:
+            - corporate22cm
+          process:
+            - corporate22cm
+          git_ref: settings-compile
+          archive:
+            source:
+              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22master_20140127-231359.tar.gz

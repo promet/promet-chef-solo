@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "Sarah Jeanne Tillo",
+  "id": "sarah",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAwIgqrnVYP3goc5+rOpQ2SwZQLle4uf/yAW9HFkUjrtK9oYUme5F1wQR5kzRfbMpTIPmgurAVeQSUH/2+9phz8vRGqObHXzacDX+4jwfACXqz/yvfr/7GeIGHSTDM7vak9aSMSVcY3drd4/BQsrhuruPTKJU9n+zvnZzsT+G+D5oUxo7LElIQjRAigSvwesXPFl6C2I2Qd7pgwzvTe6f1pKBOj8HweCjz0SmKSJz0/v7w7x0CNZmjB/1ccCCzw4y3fgkn1ezgI48j5DPYQiMapgbehjDqOQRyzwEY/ro2/q32dkqPjk0TDHyaSUqisKBnYU0hBO6U0xfg9S0SFr5sXQ== sarah@promethost.com",
+  "password": "$1$HeSWgaW4$BniW0jlUfahNu5DpIqFRg0",
+"shell": "/bin/bash"
+}

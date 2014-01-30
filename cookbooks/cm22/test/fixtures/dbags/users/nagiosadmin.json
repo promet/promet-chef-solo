@@ -1,0 +1,9 @@
+{
+  "id": "nagiosadmin",
+  "groups": "ops",
+  "htpasswd": "{SHA}26EtrruJDKnNxG8PqQn02TmEvbc=",
+  "nagios": {
+    "pager": "sysadmins@promethost.com",
+    "email": "sysadmins@promethost.com"
+  }
+}

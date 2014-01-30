@@ -42,6 +42,36 @@ action :update do
     command 'drush kw-s'
   end
 
+  conf_d = "#{node.drupal.settings_dir}/#{subdomain}"
+  database = @new_resource.database
+  drupal_settings conf_d do
+    config ({
+      'databases' => {
+        'default' => {
+          'default' => {
+            'database' => database['database'],
+            'username' => database['username'],
+            'password' => database['password'],
+            'host'     => 'localhost',
+            'driver'   => 'mysql'
+          }
+        }
+      }
+    })
+    owner machine_user
+    group 'www-data'
+  end
+
+  composer_project "#{root}/src" do
+    action :install
+    run_as machine_user
+  end
+
+  execute "#{subdomain}-settings-compile" do
+    command "vendor/bin/settings_compile #{conf_d} #{root}/cnf/settings.local.php"
+    cwd "#{root}/src"
+  end
+
   new_build = "#{root}/builds/#{build_id}"
 
   directory new_build do
@@ -49,30 +79,53 @@ action :update do
     group 'www-data'
   end
 
-  execute "22cm_extract_#{subdomain}_#{build_id}" do
-    command "tar xzf #{cm22_archive} -C #{new_build} --strip-components=1"
-    not_if do ::File.exists? "#{new_build}/index.php" end
-  end
+  unless ::File.exists? "#{new_build}/index.php"
+    execute "22cm_extract_#{subdomain}_#{build_id}" do
+      command "tar xzf #{cm22_archive} -C #{new_build} --strip-components=1 && chown -R #{machine_user}:www-data #{new_build}"
+    end
 
-  execute "kw-activate-#{subdomain}" do
-    user    machine_user
-    environment({'HOME' => home})
-    cwd     root
-    command "drush kw-activate-build builds/#{build_id}"
-  end
+    execute "kw-activate-#{subdomain}" do
+      user    machine_user
+      environment({'HOME' => home})
+      cwd     root
+      command "drush kw-activate-build builds/#{build_id}"
+    end
 
-  execute "install_cm22_site-#{subdomain}" do
-    user    machine_user
-    environment({'HOME' => home})
-    cwd     root
-    command "#{root}/src/tools/install.sh && touch #{root}/install.lock"
-    creates "#{root}/install.lock"
-  end
+    directory "#{new_build}/sites/all/vendor" do
+      owner machine_user
+      group 'www-data'
+    end
 
-  execute "update_cm22_site-#{subdomain}" do
-    user    machine_user
-    environment({'HOME' => home})
-    cwd     root
-    command "#{root}/src/tools/update.sh #{machine_name}"
+    execute "install_cm22_site-#{subdomain}" do
+      user    machine_user
+      environment({'HOME' => home})
+      cwd     root
+      command "#{root}/src/tools/install.sh && touch #{root}/install.lock"
+      creates "#{root}/install.lock"
+    end
+
+    execute "composerify-with-durp-durp-durpal-#{subdomain}" do
+      user    machine_user
+      environment({'HOME' => home})
+      cwd     new_build
+      command "drush composer-manager install -y"
+    end
+
+    execute "update_cm22_site-#{subdomain}" do
+      user    machine_user
+      environment({'HOME' => home})
+      cwd     root
+      command "#{root}/src/tools/update.sh #{machine_name}"
+      # srsly
+      returns [1, 0]
+    end
+
+    # there's literally no other way to make this work
+    execute "update_cm22_site-#{subdomain}-again" do
+      user    machine_user
+      environment({'HOME' => home})
+      cwd     root
+      command "#{root}/src/tools/update.sh #{machine_name}"
+    end
   end
 end

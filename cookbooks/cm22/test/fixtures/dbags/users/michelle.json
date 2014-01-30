@@ -1,0 +1,12 @@
+{
+  "groups": [
+    "dev",
+    "www-data",
+    "sysadmin"
+  ],
+  "comment": "Michelle Krejci",
+  "id": "michelle",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEApFJzJUUpenCx/zAqNkVqWofGdn2LYDweplLkPoPU7jjAk3Zw9t8z2eYffLpMcFPAKgL9VNeyoNRfREFqepwBJiMkTwLVezaHDPX3YvdRrmVugyBNG1TcIOujkvkeIdNtxILQ7mppuMos7i63zbfa+7ID5mTPyReQdjv8hrjvsrCfYRP5ooaPH7ur//+RIrAaSCekiSz+29NjS0B6sVpoolM60No8Th3L29hqfLaTekLoQPZrSRvD6m0AvQ9BOUmPBBJ4C66gnKBHocGsd1jsoLzecEuhwMPm98XPv0riiUgR+D0903vxk9YuGvHq9hi5G6RFFBzpAe9FxfpgWMiM+Q== michelle.krejci@promethost.com",
+  "password": "$1$fDziY4AZ$JnGDnmMR8V88q2aMzqcPK.",
+"shell": "/bin/bash"
+}

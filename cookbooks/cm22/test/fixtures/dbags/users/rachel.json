@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "Rachel Jaro",
+  "id": "rachel",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCaVEWDhexgdO00On/LR8tJ/PYCmX9Wk/O25fIEa7qRyAti4ihVQ/z/0RifRw1y9fGEiPoAoo1Os9EHndwBxnKiYHfZ++C2eJygm9pREOAwj15McUGQZ2sc3DQnRzIDDt6xeL2wn1UL9rHEjX33O1UqepCWqabXXeO50BPaf7JO7Y0ak8xVA0A3cPWNM2EVnZKlWd9ZU0yWo56/Mp8/ix8cPjTMJohtN1EMjWaCMajJgN6T8aW1qcHGzx7OLKIV9MJ2wI8tRNqW3PDMlCs4W5EzXEkjGNKzYasaLVxILuY8lK8xUMbixnf0Y5iKA5ZdNLApKyAfZHUU5fgopb6wz5HV rachel@emo.local",
+  "password": "$1$d9U/oMGh$HRJ.0Th3SISYJboGYQcb71",
+"shell": "/bin/bash"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "corporate22cm",
+  "database_master_role": ["db_master"],
+  "databases": {
+    "_default": {
+      "database": "corporate22cmDB",
+      "username": "corporate22cmDBA",
+      "password": "corporate22cmPASS"
+    }
+  }
+}

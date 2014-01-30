@@ -1,0 +1,11 @@
+{
+  "id": "publication22cm",
+  "database_master_role": ["db_master"],
+  "databases": {
+    "_default": {
+      "database": "pub22cmDB",
+      "username": "pub22cmDBA",
+      "password": "pub22cmPASS"
+    }
+  }
+}

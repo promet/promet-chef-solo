@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "John Ross Castano",
+  "id": "johnross",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5IM6DpP19022DAua/gp/4xbUm4vA/SLROFdJTWBLgGsA3w7NBIiKAkK2K9rhZpYOqtiuk0btsBK9eD5V3Jsbw3ixCNOq9CVVEpCVQ/CGgA0kub9+bj1GUPrK/VxBbVx11BMeYbG1n25yCNBDccGh2TNowTOZ85uMgE1ucWkqwbUiizKAs9bdndt5zspQ74Kdi+sM/mWJ5jjJD8BqQyCT1fxWci4KDNc/M1iinn7Qtuy1DZWHCpEC2CpLFlAPt5DnFeZNfTGhsQoHvO6keB9P/QBOoFJ8tzEfaH+USwWcvbCBJEHjeoB3NbQ4juiM/x05i/3kAHkw7KYOEU+6XtZGN johnross@prometsource.com",
+  "password": "$1$ZPQXhU7n$LRIFrSqkE9jAJHud.Kh6z/",
+"shell": "/bin/bash"
+}

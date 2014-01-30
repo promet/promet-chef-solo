@@ -1,0 +1,12 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "promet",
+  "id": "promet",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC81POLjzOtGI6wyhwoGOcp4pT8kNUxf12clfKSQf/WyzlT43crWV15Q3FvWlQBdDoUDgXOBxTuto0eE3YixyJK7UgcCs87DopZJHpRcLxG2THoflGhaEpyhzLIYrWBEf+q+0IyVOxP1Ma/R5Jy0Wbfl9wznCDjwBGfxBtf6g6sGS3tDZo0Sg0hp99XAI9svFtH/fP9E7VHohmzBhoFmgM/9egtpRrtcA7K44ZAMX3YtXf5XrePUTHZeH5CmIEMtiAj37CM9IleVUPuQkx/4MzSKtwiPrTf6ToqEdbZ5SE21TuBZcq4TvkbtdC8oq2g9JT8tOjbc0cqIAe6r9iMr1QH git@git.promethost.com",
+  "password": "$1$YYhSmRtL$WKmHTZD1xbTkSRXB6QwQm0",
+  "shell": "/bin/bash",
+  "local_files": true
+}

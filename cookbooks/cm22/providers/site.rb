@@ -19,18 +19,18 @@ action :update do
 
   directory root do
     owner     machine_user
-    group     'www-data'
+    group     node.cm22.httpd_group
     recursive true
   end
 
   directory "#{root}/archives" do
     owner     machine_user
-    group     'www-data'
+    group     node.cm22.httpd_group
   end
 
   git "#{root}/src" do
     user        machine_user
-    group       'www-data'
+    group       node.cm22.httpd_group
     repository  git_repo
     reference   git_ref
   end
@@ -45,21 +45,9 @@ action :update do
   conf_d = "#{node.drupal.settings_dir}/#{subdomain}"
   database = @new_resource.database
   drupal_settings conf_d do
-    config ({
-      'databases' => {
-        'default' => {
-          'default' => {
-            'database' => database['database'],
-            'username' => database['username'],
-            'password' => database['password'],
-            'host'     => 'localhost',
-            'driver'   => 'mysql'
-          }
-        }
-      }
-    })
+    config new_resource.config
     owner machine_user
-    group 'www-data'
+    group node.cm22.httpd_group
   end
 
   composer_project "#{root}/src" do
@@ -76,12 +64,12 @@ action :update do
 
   directory new_build do
     owner machine_user
-    group 'www-data'
+    group node.cm22.httpd_group
   end
 
   unless ::File.exists? "#{new_build}/index.php"
     execute "22cm_extract_#{subdomain}_#{build_id}" do
-      command "tar xzf #{cm22_archive} -C #{new_build} --strip-components=1 && chown -R #{machine_user}:www-data #{new_build}"
+      command "tar xzf #{cm22_archive} -C #{new_build} --strip-components=1 && chown -R #{machine_user}:#{node.cm22.httpd_group} #{new_build}"
     end
 
     execute "kw-activate-#{subdomain}" do
@@ -93,7 +81,7 @@ action :update do
 
     directory "#{new_build}/sites/all/vendor" do
       owner machine_user
-      group 'www-data'
+      group node.cm22.httpd_group
     end
 
     execute "install_cm22_site-#{subdomain}" do
@@ -102,13 +90,6 @@ action :update do
       cwd     root
       command "#{root}/src/tools/install.sh && touch #{root}/install.lock"
       creates "#{root}/install.lock"
-    end
-
-    execute "composerify-with-durp-durp-durpal-#{subdomain}" do
-      user    machine_user
-      environment({'HOME' => home})
-      cwd     new_build
-      command "drush composer-manager install -y"
     end
 
     execute "update_cm22_site-#{subdomain}" do

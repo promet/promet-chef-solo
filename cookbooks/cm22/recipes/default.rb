@@ -15,8 +15,8 @@ composer '/usr/local/bin' do
 end
 
 directory node.cm22.webroot do
-  owner     'www-data'
-  group     'www-data'
+  owner     node.cm22.httpd_group
+  group     node.cm22.httpd_group
   recursive true
 end
 
@@ -47,7 +47,8 @@ end
 
 node.cm22.slave.process.each do |machine_name|
   sub = node.cm22.slave.sites.send machine_name
-  item = data_bag_item('apps', sub).to_hash
+  item = data_bag_item('drupal', node.cm22.slave.base_data_bag_item).to_hash
+  item['databases']['default']['default']['database'] = "#{sub}DB"
   cm22_site sub do
     machine_name  machine_name
     archive_url   node.cm22.slave.archive.source
@@ -55,11 +56,12 @@ node.cm22.slave.process.each do |machine_name|
     root          "#{node.cm22.webroot}/#{sub}"
     git_repo      node.cm22.slave.git_repo
     git_ref       node.cm22.slave.git_ref
-    database      item['databases']['_default']
+    config        item
   end
 end
 
 node.cm22.master.process.each do |sub|
+  item = data_bag_item('drupal', node.cm22.master.base_data_bag_item).to_hash
   cm22_site sub do
     subdomain     sub
     archive_url   node.cm22.master.archive.source
@@ -67,6 +69,6 @@ node.cm22.master.process.each do |sub|
     root          "#{node.cm22.webroot}/#{sub}"
     git_repo      node.cm22.master.git_repo
     git_ref       node.cm22.master.git_ref
-    database      data_bag_item('apps', sub).to_hash
+    config        item
   end
 end

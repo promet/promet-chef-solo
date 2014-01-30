@@ -1,0 +1,14 @@
+{
+  "id": "cm22master",
+  "databases": {
+    "default": {
+      "default": {
+        "username": "cm22masterDBA",
+        "database": "cm22masterDB",
+        "password": "cm22masterPASS",
+        "driver": "mysql",
+        "host": "localhost"
+      }
+    }
+  },
+}

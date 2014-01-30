@@ -10,6 +10,7 @@ cookbook_file "/home/promet/.ssh/id_rsa" do
  action :create
 end
 
+include_recipe 'git'
 git "/home/promet/scriptutils" do
    repository "git@git.promethost.com:scriptutils.git"
    user "promet"

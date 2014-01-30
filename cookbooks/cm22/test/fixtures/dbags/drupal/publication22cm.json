@@ -1,0 +1,16 @@
+{
+  "id": "publication22cm",
+  "databases": {
+    "default": {
+      "default": {
+        "username": "pub22cmDBA",
+        "database": "pub22cmDB",
+        "password": "pub22cmPASS",
+        "driver": "mysql",
+        "host": "localhost"
+      }
+    }
+  },
+  "uri": "publication22cm.dev",
+  "doc_root": "build"
+}

@@ -13,7 +13,7 @@ action :update do
   cm22_archive        = "#{Chef::Config[:file_cache_path]}/#{archive_name}"
 
   remote_file cm22_archive do
-    source node.cm22.slave.archive.source
+    source archive_url
     action :create_if_missing
   end
 
@@ -43,7 +43,6 @@ action :update do
   end
 
   conf_d = "#{node.drupal.settings_dir}/#{subdomain}"
-  database = @new_resource.database
   drupal_settings conf_d do
     config new_resource.config
     owner machine_user

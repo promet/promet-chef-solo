@@ -1,0 +1,14 @@
+{
+  "id": "corporate22cm",
+  "databases": {
+    "default": {
+      "default": {
+        "username": "corporate22cmDBA",
+        "database": "corporate22cmDB",
+        "password": "corporate22cmPASS",
+        "driver": "mysql",
+        "host": "localhost"
+      }
+    }
+  }
+}

@@ -27,6 +27,7 @@ suites:
         machine_user: promet
         webroot: /var/www/sites
         slave:
+          base_data_bag_item: publication22cm
           sites:
             publication22cm: publication22cm
           process:
@@ -34,16 +35,17 @@ suites:
           git_ref: settings-compile
           archive:
             source:
-              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22slave_20140130-135157.tar.gz
+              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22slave_20140130-192239.tar.gz
         master:
           sites:
             - corporate22cm
           process:
             - corporate22cm
           git_ref: settings-compile
+          base_data_bag_item: corporate22cm
           archive:
             source:
-              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22master_20140130-135502.tar.gz
+              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22master_20140130-191707.tar.gz
   - name: deploy_satellites
     run_list:
       - recipe[test_cm22]

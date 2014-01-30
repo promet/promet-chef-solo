@@ -25,20 +25,22 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         'webroot' => '/var/www/sites',
         'slave' => {
           'process' => [ 'publication22cm' ],
+          'base_data_bag_item' => 'publication22cm',
           'sites' => {
             'publication22cm' => 'publication22cm'
           },
           'git_ref' => 'settings-compile',
           'archive' => {
-            'source' => 'https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22slave_20140130-012659.tar.gz'
+            'source' => 'https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22slave_20140130-192239.tar.gz'
           }
         },
         'master' => {
           'sites' => ['corporate22cm'],
           'process' => [ 'corporate22cm' ],
+          'base_data_bag_item' => 'corporate22cm',
           'git_ref' => 'settings-compile',
           'archive' => {
-            'source' => 'https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22master_20140129-233500.tar.gz'
+            'source' => 'https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22master_20140130-191707.tar.gz'
           }
         }
       }

@@ -1,0 +1,14 @@
+{
+  "id": "corporate22cm-dev",
+  "databases": {
+    "default": {
+      "default": {
+        "database": "22cmcoprDEVDB",
+        "username": "22cmcoprDEVDBA",
+        "password": "20130910.082125",
+        "host": "localhost",
+        "driver": "mysql"
+      }
+    }
+  }
+}

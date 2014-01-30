@@ -48,7 +48,7 @@ end
 node.cm22.slave.process.each do |machine_name|
   sub = node.cm22.slave.sites.send machine_name
   item = data_bag_item('drupal', node.cm22.slave.base_data_bag_item).to_hash
-  item['databases']['default']['default']['database'] = "#{sub}DB"
+  item['databases']['default']['default']['database'] ||= "#{sub}DB"
   cm22_site sub do
     machine_name  machine_name
     archive_url   node.cm22.slave.archive.source

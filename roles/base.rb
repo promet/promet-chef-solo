@@ -12,7 +12,7 @@ run_list(
     "role[fail2ban]",
     "recipe[tmux]",
     "recipe[git]",
-    "role[promet-chef-client]",
+    "role[chef-client]",
     "recipe[chef_gem]",
     "recipe[chef_gem::ruby-shadow]",
     "role[sudo]",

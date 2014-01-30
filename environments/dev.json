@@ -39,6 +39,7 @@
     "dmg": "= 1.1.0",
     "database": "= 1.4.0",
     "cron": "= 1.2.2",
+    "cronapt-cookbook": "= 0.2.0",
     "chef_handler": "= 1.1.4",
     "chef_gem": "= 0.1.0",
     "chef-client": "= 2.2.4",

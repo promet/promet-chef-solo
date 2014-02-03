@@ -9,9 +9,9 @@
       "locked_version": "0.8.0"
     },
     "drupal": {
-      "locked_version": "1.2.2",
+      "locked_version": "1.2.4",
       "git": "git://github.com/promet/drupal_cookbook.git",
-      "ref": "be8ee24e43151be5ddc25276dd20645e0990b93b"
+      "ref": "3ab50d506d18a23d39c83dfb2a0e4db9aaae4a4d"
     },
     "composer": {
       "locked_version": "0.1.0",

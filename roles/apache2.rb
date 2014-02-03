@@ -13,7 +13,7 @@ run_list(
 
 default_attributes(
   :apache => {
-    :ext_status => "true",
+    :ext_status => true,
     :listen_ports => ["80", "443"],
     :traceenable => "Off",
     :serversignature => "Off",

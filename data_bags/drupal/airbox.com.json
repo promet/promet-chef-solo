@@ -1,0 +1,18 @@
+{
+  "id": "airbox-com",
+  "databases": {
+    "default": {
+      "default": {
+        "username": "airboxprodDBA",
+        "database": "airboxprodDB",
+        "password": "mdJuZteGjjB8BZSy",
+        "driver": "mysql",
+        "host": "localhost"
+      }
+    }
+  },
+  "uri": "airbox.com",
+  "user": "promet",
+  "group": "www-data",
+  "doc_root": "www"
+}

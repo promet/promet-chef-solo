@@ -3,7 +3,7 @@ description "Promet Users Role"
 run_list(
     "recipe[ssh_known_hosts]",
     "recipe[users]",
-    "recipe[users::dev]",
+#    "recipe[users::dev]",
     "recipe[users::ops]",
     "recipe[users::sysadmins]",
     "recipe[users::www-data]",

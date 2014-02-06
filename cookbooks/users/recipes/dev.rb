@@ -24,11 +24,3 @@ users_manage "dev" do
   group_id 2400
   action [ :remove, :create ]
 end
-
-sudo "dev" do
-  user "%dev"
-  runas "ALL"
-  host "ALL"
-  commands ["/usr/local/bin/drush", "/usr/bin/drush", "/bin/tar", "/usr/bin/wget", "/usr/bin/git", "/bin/cp", "/bin/mv", "/bin/chown", "/bin/chmod"]
-  nopasswd true
-end

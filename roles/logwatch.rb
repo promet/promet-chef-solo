@@ -5,5 +5,5 @@ run_list(
 )
 
 default_attributes(
-    :logwatch => { :email => "logwatch@prometsource.com" }
+    :logwatch => { :email => "sysadmins@prometsource.com" }
 )

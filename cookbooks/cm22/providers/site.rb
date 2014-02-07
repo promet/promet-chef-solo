@@ -12,6 +12,13 @@ action :update do
   build_id            = archive_name.split('.').first.split('_').last
   cm22_archive        = "#{Chef::Config[:file_cache_path]}/#{archive_name}"
 
+  conf_d = "#{node.drupal.settings_dir}/#{subdomain}"
+  drupal_settings conf_d do
+    config new_resource.config
+    owner machine_user
+    group node.cm22.httpd_group
+  end
+
   remote_file cm22_archive do
     source archive_url
     action :create_if_missing
@@ -35,32 +42,14 @@ action :update do
     reference   git_ref
   end
 
-  execute "kraftwagen-setup-#{subdomain}" do
+  execute "init-#{subdomain}" do
     user    machine_user
-    environment({'HOME' => home})
     cwd     root
-    command 'drush kw-s'
-  end
-
-  conf_d = "#{node.drupal.settings_dir}/#{subdomain}"
-  drupal_settings conf_d do
-    config new_resource.config
-    owner machine_user
-    group node.cm22.httpd_group
-  end
-
-  composer_project "#{root}/src" do
-    action :install
-    run_as machine_user
-  end
-
-  execute "#{subdomain}-settings-compile" do
-    command "vendor/bin/settings_compile #{conf_d} #{root}/cnf/settings.local.php"
-    cwd "#{root}/src"
+    command "#{root}/src/tools/init.sh"
+    environment({'HOME' => home})
   end
 
   new_build = "#{root}/builds/#{build_id}"
-
   directory new_build do
     owner machine_user
     group node.cm22.httpd_group
@@ -78,24 +67,25 @@ action :update do
       command "drush kw-activate-build builds/#{build_id}"
     end
 
-    directory "#{new_build}/sites/all/vendor" do
-      owner machine_user
-      group node.cm22.httpd_group
-    end
-
     execute "install_cm22_site-#{subdomain}" do
       user    machine_user
-      environment({'HOME' => home})
       cwd     root
       command "#{root}/src/tools/install.sh && touch #{root}/install.lock"
       creates "#{root}/install.lock"
+      environment({
+        'HOME' => home,
+        'DRUPAL_CONF' => conf_d
+      })
     end
 
     execute "update_cm22_site-#{subdomain}" do
       user    machine_user
-      environment({'HOME' => home})
       cwd     root
       command "#{root}/src/tools/update.sh #{machine_name}"
+      environment({
+        'HOME' => home,
+        'DRUPAL_CONF' => conf_d
+      })
       # srsly
       returns [1, 0]
     end
@@ -103,9 +93,12 @@ action :update do
     # there's literally no other way to make this work
     execute "update_cm22_site-#{subdomain}-again" do
       user    machine_user
-      environment({'HOME' => home})
       cwd     root
       command "#{root}/src/tools/update.sh #{machine_name}"
+      environment({
+        'HOME' => home,
+        'DRUPAL_CONF' => conf_d
+      })
     end
   end
 end

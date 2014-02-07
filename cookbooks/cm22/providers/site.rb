@@ -42,13 +42,6 @@ action :update do
     reference   git_ref
   end
 
-  execute "init-#{subdomain}" do
-    user    machine_user
-    cwd     root
-    command "#{root}/src/tools/init.sh"
-    environment({'HOME' => home})
-  end
-
   new_build = "#{root}/builds/#{build_id}"
   directory new_build do
     owner machine_user
@@ -58,6 +51,13 @@ action :update do
   unless ::File.exists? "#{new_build}/index.php"
     execute "22cm_extract_#{subdomain}_#{build_id}" do
       command "tar xzf #{cm22_archive} -C #{new_build} --strip-components=1 && chown -R #{machine_user}:#{node.cm22.httpd_group} #{new_build}"
+    end
+
+    execute "init-#{subdomain}" do
+      user    machine_user
+      cwd     root
+      command "#{root}/src/tools/init.sh"
+      environment({'HOME' => home})
     end
 
     execute "kw-activate-#{subdomain}" do

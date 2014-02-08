@@ -12,5 +12,7 @@
     }
   },
   "uri": "airbox.prometdev.com",
+  "user": "promet",
+  "group": "www-data",
   "doc_root": "www"
 }

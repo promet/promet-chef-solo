@@ -3,8 +3,8 @@ driver_plugin: vagrant
 driver_config:
   require_chef_omnibus: true
   customize:
-    memory: 4096
-    cpuexecutioncap: 50
+    memory: 8192
+    cpuexecutioncap: 100
 
 platforms:
   - name: debian-7.2.0
@@ -25,6 +25,7 @@ suites:
         server_repl_password: pass
       cm22:
         machine_user: promet
+        httpd_group: www-data
         webroot: /var/www/sites
         slave:
           base_data_bag_item: publication22cm
@@ -35,7 +36,7 @@ suites:
           git_ref: settings-compile
           archive:
             source:
-              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22slave_20140130-192239.tar.gz
+              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22slave_20140206-155028.tar.gz
         master:
           sites:
             - corporate22cm
@@ -45,7 +46,7 @@ suites:
           base_data_bag_item: corporate22cm
           archive:
             source:
-              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22master_20140130-191707.tar.gz
+              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22master_20140206-172213.tar.gz
   - name: deploy_satellites
     run_list:
       - recipe[test_cm22]

@@ -1,7 +1,7 @@
 name "cronapt"
 description "cronapt config"
 run_list(
-    "recipe[cronapt-cookbook]"
+    "recipe[cronapt]"
 )
 
 default_attributes(

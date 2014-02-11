@@ -55,7 +55,7 @@ node.cm22.slave.process.each do |machine_name|
     archive_url   node.cm22.slave.archive.source
     machine_user  node.cm22.machine_user
     root          "#{node.cm22.webroot}/#{sub}"
-    command       "src/tools/update.sh -e #{env} -n #{machine_name}"
+    command       "src/tools/update.sh -e #{env} -n #{machine_name} -c #{sub}"
     git_repo      node.cm22.slave.git_repo
     git_ref       node.cm22.slave.git_ref
     config        item
@@ -70,7 +70,7 @@ node.cm22.master.process.each do |sub|
     archive_url   node.cm22.master.archive.source
     machine_user  node.cm22.machine_user
     root          "#{node.cm22.webroot}/#{sub}"
-    command       "src/tools/update.sh -e #{env}"
+    command       "src/tools/update.sh -e #{env} -c #{sub}"
     git_repo      node.cm22.master.git_repo
     git_ref       node.cm22.master.git_ref
     config        item

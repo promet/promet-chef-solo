@@ -47,6 +47,7 @@ end
 
 node.cm22.slave.process.each do |machine_name|
   sub = node.cm22.slave.sites.send machine_name
+  conf_d = "#{node.drupal.settings_dir}/#{sub}"
   item = data_bag_item('drupal', node.cm22.slave.base_data_bag_item).to_hash
   item['databases']['default']['default']['database'] ||= "#{sub}DB"
   env = item['environment'] || 'staging'
@@ -55,7 +56,7 @@ node.cm22.slave.process.each do |machine_name|
     archive_url   node.cm22.slave.archive.source
     machine_user  node.cm22.machine_user
     root          "#{node.cm22.webroot}/#{sub}"
-    command       "src/tools/update.sh -e #{env} -n #{machine_name} -c #{sub}"
+    command       "src/tools/update.sh -e #{env} -n #{machine_name} -c #{conf_d}/#{sub}"
     git_repo      node.cm22.slave.git_repo
     git_ref       node.cm22.slave.git_ref
     config        item
@@ -63,6 +64,8 @@ node.cm22.slave.process.each do |machine_name|
 end
 
 node.cm22.master.process.each do |sub|
+  # TODO stop the duplication... probably need to split provider
+  conf_d = "#{node.drupal.settings_dir}/#{sub}"
   item = data_bag_item('drupal', node.cm22.master.base_data_bag_item).to_hash
   env = item['environment'] || 'staging'
   cm22_site sub do
@@ -70,7 +73,7 @@ node.cm22.master.process.each do |sub|
     archive_url   node.cm22.master.archive.source
     machine_user  node.cm22.machine_user
     root          "#{node.cm22.webroot}/#{sub}"
-    command       "src/tools/update.sh -e #{env} -c #{sub}"
+    command       "src/tools/update.sh -e #{env} -c #{conf_d}/#{sub}"
     git_repo      node.cm22.master.git_repo
     git_ref       node.cm22.master.git_ref
     config        item

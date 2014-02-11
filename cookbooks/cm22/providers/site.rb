@@ -1,6 +1,7 @@
 action :update do
   machine_user  = @new_resource.machine_user
   subdomain     = @new_resource.subdomain
+  environment   = @new_resource.environment
   machine_name  = @new_resource.machine_name
   root          = @new_resource.root
   home          = "/home/#{machine_user}"
@@ -45,16 +46,10 @@ action :update do
   new_build = "#{root}/builds/#{build_id}"
   unless ::File.exists? "#{new_build}/index.php"
 
-    execute "init-#{subdomain}" do
-      user    machine_user
-      cwd     root
-      command "#{root}/src/tools/init.sh"
-      environment({'HOME' => home})
-    end
-
     directory new_build do
-      owner machine_user
-      group node.cm22.httpd_group
+      owner     machine_user
+      group     node.cm22.httpd_group
+      recursive true
     end
 
     execute "22cm_extract_#{subdomain}_#{build_id}" do
@@ -68,37 +63,12 @@ action :update do
       command "drush kw-activate-build builds/#{build_id}"
     end
 
-    execute "install_cm22_site-#{subdomain}" do
-      user    machine_user
-      cwd     root
-      command "#{root}/src/tools/install.sh && touch #{root}/install.lock"
-      creates "#{root}/install.lock"
-      environment({
-        'HOME' => home,
-        'DRUPAL_CONF' => conf_d
-      })
-    end
-
     execute "update_cm22_site-#{subdomain}" do
       user    machine_user
       cwd     root
-      command "#{root}/src/tools/update.sh #{machine_name}"
+      command new_resource.command
       environment({
-        'HOME' => home,
-        'DRUPAL_CONF' => conf_d
-      })
-      # srsly
-      returns [1, 0]
-    end
-
-    # there's literally no other way to make this work
-    execute "update_cm22_site-#{subdomain}-again" do
-      user    machine_user
-      cwd     root
-      command "#{root}/src/tools/update.sh #{machine_name}"
-      environment({
-        'HOME' => home,
-        'DRUPAL_CONF' => conf_d
+        'HOME' => home
       })
     end
   end

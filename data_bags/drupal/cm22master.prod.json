@@ -11,6 +11,6 @@
       }
     }
   },
-  "base_url": "\"https://$_SERVER['HTTP_HOST']\"",
+  "base_url": "https://$_SERVER['HTTP_HOST']",
   "environment": "staging"
 }

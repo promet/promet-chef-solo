@@ -44,8 +44,8 @@ action :update do
   end
 
   new_build = "#{root}/builds/#{build_id}"
-  unless ::File.exists? "#{new_build}/index.php"
 
+  unless ::File.exists? "#{new_build}/index.php"
     directory new_build do
       owner     machine_user
       group     node.cm22.httpd_group
@@ -62,14 +62,14 @@ action :update do
       cwd     root
       command "drush kw-activate-build builds/#{build_id}"
     end
+  end
 
-    execute "update_cm22_site-#{subdomain}" do
-      user    machine_user
-      cwd     root
-      command new_resource.command
-      environment({
-        'HOME' => home
-      })
-    end
+  execute "update_cm22_site-#{subdomain}" do
+    user    machine_user
+    cwd     root
+    command new_resource.command
+    environment({
+      'HOME' => home
+    })
   end
 end

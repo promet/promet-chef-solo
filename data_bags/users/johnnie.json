@@ -1,7 +1,7 @@
 {
   "groups": [
     "dev",
-    "ops",
+    "sysadmin",
     "www-data"
   ],
   "comment": "Johnnie Fox",

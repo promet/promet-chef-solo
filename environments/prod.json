@@ -10,6 +10,7 @@
     "users": "= 1.5.2",
     "tmux": "= 1.2.2",
     "sudo": "= 2.1.4",
+    "promet_sudo": "= 0.2.0",
     "ssh_known_hosts": "= 1.0.0",
     "runit": "= 1.1.6",
     "rsyslog": "= 1.6.0",

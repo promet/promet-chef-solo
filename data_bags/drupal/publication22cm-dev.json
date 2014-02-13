@@ -10,6 +10,5 @@
         "driver": "mysql"
       }
     }
-  },
-  "base_url": ""
+  }
 }

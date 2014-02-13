@@ -20,6 +20,12 @@ default.cm22.slave.sites = {
 }
 
 default.cm22.slave.process        = []
+default.cm22.slave.masters        = {
+  local: "cm22master.dev",
+  development: "corporate22cm.prometdev.com",
+  staging: "corporate22cm.prometstaging.com",
+  prod: "22ndcenturymedia.com",
+}
 default.cm22.slave.git_repo       = 'git@github.com:promet/CM22Slave'
 default.cm22.slave.git_ref        = 'master'
 default.cm22.slave.archive.source = 'https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22slave_20140121-195306.tar.gz'

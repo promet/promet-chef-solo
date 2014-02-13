@@ -21,10 +21,10 @@ default.cm22.slave.sites = {
 
 default.cm22.slave.process        = []
 default.cm22.slave.masters        = {
-  local: "cm22master.dev",
-  development: "corporate22cm.prometdev.com",
-  staging: "corporate22cm.prometstaging.com",
-  prod: "22ndcenturymedia.com",
+  local: "http://cm22master.dev",
+  development: "http://corporate22cm.prometdev.com",
+  staging: "http://corporate22cm.prometstaging.com",
+  prod: "http://22ndcenturymedia.com",
 }
 default.cm22.slave.git_repo       = 'git@github.com:promet/CM22Slave'
 default.cm22.slave.git_ref        = 'master'

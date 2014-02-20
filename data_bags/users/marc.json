@@ -1,0 +1,12 @@
+{
+  "groups": [
+    "sysadmin",
+    "dev",
+    "www-data"
+  ],
+  "comment": "Marc Delay",
+  "id": "marc",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNPhXGdAqLZv3LRu20UPplvLkSKfipdWH2k5o0SNRXLHVzkVpFbbQ3eSPuH1vN1ahXb36qMr7GvndxteEb2Eh4KtaxNfrevGAB4+IfxAyhvXCFNuJdg2WWs/HH7Y2p3otDB45uEb7ry9NhGSShkme6Grc8BS+e7RSTrii3JXeZbCGIbrJxVxDm2gaXhTWqoEaAjgF20HMTECo05rhDVb4aQ6wPGgmzKNGEnoCEBxR8rT8vibpMgsfNFINaz4ueS/CY2iWGGrsJ0LsdsmzE5GkrC4sNWQBGBGv0QQtwUIDeIMg4Z5g22mXr+YLJ5lIiOhyH4pZ31NxoGiKoMih2P/zZ admin@macmini.local",
+  "password": "$1$IGOacBIu$Qz8z79dVvatVwWwR1gWfq1",
+  "shell": "/bin/bash"
+}

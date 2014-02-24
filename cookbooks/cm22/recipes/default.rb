@@ -52,13 +52,13 @@ node.cm22.master.process.each do |sub|
   env = item['environment'] || 'staging'
   cm22_site sub do
     subdomain     sub
-    archive_url   node.cm22.master.archive.source
+    archive_url   item['archive_url']
     machine_user  node.cm22.machine_user
     root          "#{node.cm22.webroot}/#{sub}"
     command       "src/tools/update.sh -e #{env} -c #{conf_d}"
-    git_repo      node.cm22.master.git_repo
-    git_ref       node.cm22.master.git_ref
-    config        item
+    git_repo      item['git_repo']
+    git_ref       item['git_ref']
+    config        item['drupal']
   end
 end
 
@@ -71,12 +71,12 @@ node.cm22.slave.process.each do |machine_name|
   master = node.cm22.slave.masters.send env
   cm22_site sub do
     machine_name  machine_name
-    archive_url   node.cm22.slave.archive.source
+    archive_url   item['archive_url']
     machine_user  node.cm22.machine_user
     root          "#{node.cm22.webroot}/#{sub}"
     command       "src/tools/update.sh -e #{env} -n #{machine_name} -c #{conf_d} -m #{master}"
-    git_repo      node.cm22.slave.git_repo
-    git_ref       node.cm22.slave.git_ref
-    config        item
+    git_repo      item['git_repo']
+    git_ref       item['git_ref']
+    config        item['drupal']
   end
 end

@@ -13,7 +13,7 @@ end
 
 web_app '22ndcenturymedia' do
   template 'web_app.conf.erb'
-  cookbook 'cm22'
+  cookbook 'apache2'
   docroot "#{node.cm22.webroot}/cm22master/build"
   server_aliases ["22ndcenturymedia.com"]
   server_name "www.22ndcenturymedia.com"

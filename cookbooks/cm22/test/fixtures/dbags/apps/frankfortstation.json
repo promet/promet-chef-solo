@@ -1,0 +1,11 @@
+{
+  "id": "frankfortstation",
+  "database_master_role": ["db_master"],
+  "databases": {
+    "_default": {
+      "database": "frankfortstationDB",
+      "username": "sateliteDBA",
+      "password": "satelitePASS"
+    }
+  }
+}

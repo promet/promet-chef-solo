@@ -12,8 +12,8 @@ node.cm22.slave.process.each do |name|
 end
 
 web_app '22ndcenturymedia' do
-  template 'web_app.conf.erb'
-  cookbook 'apache2'
+  template 'https.conf.erb'
+  cookbook 'cm22'
   docroot "#{node.cm22.webroot}/cm22master/build"
   server_aliases ["22ndcenturymedia.com"]
   server_name "www.22ndcenturymedia.com"

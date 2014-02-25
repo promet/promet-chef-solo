@@ -25,7 +25,7 @@ default.cm22.slave.masters        = {
   local: "http://cm22master.dev",
   development: "http://corporate22cm.prometdev.com",
   staging: "http://corporate22cm.prometstaging.com",
-  prod: "http://22ndcenturymedia.com",
+  prod: "https://www.22ndcenturymedia.com",
 }
 default.cm22.slave.git_repo       = 'git@github.com:promet/CM22Slave'
 default.cm22.slave.git_ref        = 'master'

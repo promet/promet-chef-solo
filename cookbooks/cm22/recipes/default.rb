@@ -66,7 +66,11 @@ node.cm22.slave.process.each do |machine_name|
   sub = node.cm22.slave.sites.send machine_name
   conf_d = "#{node.drupal.settings_dir}/#{sub}"
   item = data_bag_item('drupal', node.cm22.slave.base_data_bag_item).to_hash
-  item['drupal']['databases']['default']['default']['database'] ||= "#{sub}DB"
+  if sub == 'opprairie'
+    item['drupal']['databases']['default']['default']['database'] ||= "opprarieDB"
+  else
+    item['drupal']['databases']['default']['default']['database'] ||= "#{sub}DB"
+  end
   env = item['environment'] || 'staging'
   master = node.cm22.slave.masters.send env
   cm22_site sub do

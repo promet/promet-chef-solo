@@ -1,14 +1,20 @@
 {
   "id": "corporate22cm-staging",
-  "databases": {
-    "default": {
+  "drupal": {
+    "databases": {
       "default": {
-        "database": "22cmcoprSTGDB",
-        "username": "22cmcoprSTGDBA",
-        "password": "20130910.082134",
-        "host": "localhost",
-        "driver": "mysql"
+        "default": {
+          "database": "corporate22cmDB",
+          "username": "corporate22cmDBA",
+          "password": "corporate22cmPASS",
+          "host": "localhost",
+          "driver": "mysql"
+        }
       }
     }
-  }
+  },
+  "environment": "staging",
+  "git_repo": "git@github.com:promet/cm22master",
+  "git_ref": "master",
+  "archive_url": "https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/master_20140224-171414.tar.gz"
 }

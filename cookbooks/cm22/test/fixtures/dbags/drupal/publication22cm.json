@@ -1,16 +1,22 @@
 {
   "id": "publication22cm",
-  "databases": {
-    "default": {
+  "drupal": {
+    "uri": "publication22cm.dev",
+    "doc_root": "build",
+    "databases": {
       "default": {
-        "username": "pub22cmDBA",
-        "database": "pub22cmDB",
-        "password": "pub22cmPASS",
-        "driver": "mysql",
-        "host": "localhost"
+        "default": {
+          "username": "pub22cmDBA",
+          "database": "pub22cmDB",
+          "password": "pub22cmPASS",
+          "driver": "mysql",
+          "host": "localhost"
+        }
       }
     }
   },
-  "uri": "publication22cm.dev",
-  "doc_root": "build"
+  "environment": "staging",
+  "git_repo": "git@github.com:promet/CM22Slave",
+  "git_ref": "master",
+  "archive_url": "https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/slave_20140224-171812.tar.gz"
 }

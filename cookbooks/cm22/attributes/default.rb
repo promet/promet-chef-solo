@@ -5,7 +5,7 @@ default.cm22.httpd_group = 'www-data'
 
 default.cm22.slave.sites = {
   "publication22cm"             => "publication.prometstaging.com",
-  "the_orland_park_prairie"     => "opprarie",
+  "the_orland_park_prairie"     => "opprairie",
   "the_frankfort_station"       => "frankfortstation",
   "the_homer_horizon"           => "homerhorizon",
   "the_lockport_legend"         => "lockportlegend",

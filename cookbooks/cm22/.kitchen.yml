@@ -34,19 +34,12 @@ suites:
           process:
             - publication22cm
           git_ref: master
-          archive:
-            source:
-              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22slave_20140211-202131.tar.gz
         master:
           sites:
             - corporate22cm
           process:
             - corporate22cm
-          git_ref: master
           base_data_bag_item: corporate22cm
-          archive:
-            source:
-              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22master_20140211-204624.tar.gz
   - name: deploy_satellites
     run_list:
       - recipe[test_cm22]
@@ -67,25 +60,32 @@ suites:
           process:
             - the_orland_park_prairie
             - the_frankfort_station
-            - the_homer_horizon
-            - the_lockport_legend
-            - the_mokena_messenger
-            - the_new_lenox_patriot
-            - the_tinley_junction
-            - the_glenview_lantern
-            - the_northbrook_tower
-            - the_wilmette_beacon
-            - the_winnetka_current
-            - malibu_surfside_news
-          git_ref: settings-compile
-          archive:
-            source:
-              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22slave_20140130-135157.tar.gz
         master:
           base_data_bag_item: corporate22cm-staging
           process:
             - corporate22cm.prometstaging.com
-          git_ref: settings-compile
-          archive:
-            source:
-              https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22master_20140130-135502.tar.gz
+  - name: some_vhosts
+    run_list:
+      - recipe[test_cm22]
+      - role[db_master]
+      - recipe[drupal]
+      - recipe[cm22]
+      - recipe[cm22::vhosts]
+    roles_path: test/fixtures/roles
+    data_bags_path: test/fixtures/dbags
+    attributes:
+      mysql:
+        server_debian_password: pass
+        server_root_password: pass
+        server_repl_password: pass
+      cm22:
+        machine_user: promet
+        webroot: /var/www/sites/twenty_second
+        slave:
+          process:
+            - the_orland_park_prairie
+            - the_frankfort_station
+        master:
+          base_data_bag_item: corporate22cm-staging
+          process:
+            - 22ndcenturymedia.com

@@ -1,0 +1,16 @@
+{
+  "id": "cm22master",
+  "databases": {
+    "default": {
+      "default": {
+        "username": "22ndmaster",
+        "database": "22ndmaster",
+        "password": "Gijuga4c",
+        "driver": "mysql",
+        "host": "b630019121af2ab16e948d58358ecd5e594f6cc8.rackspaceclouddb.com"
+      }
+    }
+  },
+  "base_url": "https://{$_SERVER['HTTP_HOST']}",
+  "environment": "prod"
+}

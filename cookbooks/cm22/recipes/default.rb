@@ -45,30 +45,42 @@ execute "drush cc drush" do
   environment({'HOME' => home})
 end
 
-node.cm22.slave.process.each do |machine_name|
-  sub = node.cm22.slave.sites.send machine_name
-  item = data_bag_item('drupal', node.cm22.slave.base_data_bag_item).to_hash
-  item['databases']['default']['default']['database'] ||= "#{sub}DB"
+node.cm22.master.process.each do |sub|
+  # TODO stop the duplication... probably need to split provider
+  conf_d = "#{node.drupal.settings_dir}/#{sub}"
+  item = data_bag_item('drupal', node.cm22.master.base_data_bag_item).to_hash
+  env = item['environment'] || 'staging'
   cm22_site sub do
-    machine_name  machine_name
-    archive_url   node.cm22.slave.archive.source
+    subdomain     sub
+    archive_url   item['archive_url']
     machine_user  node.cm22.machine_user
     root          "#{node.cm22.webroot}/#{sub}"
-    git_repo      node.cm22.slave.git_repo
-    git_ref       node.cm22.slave.git_ref
-    config        item
+    command       "src/tools/update.sh -e #{env} -c #{conf_d}"
+    git_repo      item['git_repo']
+    git_ref       item['git_ref']
+    config        item['drupal']
   end
 end
 
-node.cm22.master.process.each do |sub|
-  item = data_bag_item('drupal', node.cm22.master.base_data_bag_item).to_hash
+node.cm22.slave.process.each do |machine_name|
+  sub = node.cm22.slave.sites.send machine_name
+  conf_d = "#{node.drupal.settings_dir}/#{sub}"
+  item = data_bag_item('drupal', node.cm22.slave.base_data_bag_item).to_hash
+  if sub == 'opprairie'
+    item['drupal']['databases']['default']['default']['database'] ||= "opprarieDB"
+  else
+    item['drupal']['databases']['default']['default']['database'] ||= "#{sub}DB"
+  end
+  env = item['environment'] || 'staging'
+  master = node.cm22.slave.masters.send env
   cm22_site sub do
-    subdomain     sub
-    archive_url   node.cm22.master.archive.source
+    machine_name  machine_name
+    archive_url   item['archive_url']
     machine_user  node.cm22.machine_user
     root          "#{node.cm22.webroot}/#{sub}"
-    git_repo      node.cm22.master.git_repo
-    git_ref       node.cm22.master.git_ref
-    config        item
+    command       "src/tools/update.sh -e #{env} -n #{machine_name} -c #{conf_d} -m #{master}"
+    git_repo      item['git_repo']
+    git_ref       item['git_ref']
+    config        item['drupal']
   end
 end

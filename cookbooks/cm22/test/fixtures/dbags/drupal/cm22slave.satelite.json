@@ -1,13 +1,19 @@
 {
   "id": "cm22slave-satelite",
-  "databases": {
-    "default": {
+  "drupal": {
+    "databases": {
       "default": {
-        "username": "22ndpapersite",
-        "password": "Ok9AiThu.Uekaila0",
-        "driver": "mysql",
-        "host": "b630019121af2ab16e948d58358ecd5e594f6cc8.rackspaceclouddb.com"
+        "default": {
+          "username": "sateliteDBA",
+          "password": "satelitePASS",
+          "driver": "mysql",
+          "host": "localhost"
+        }
       }
     }
-  }
+  },
+  "environment": "staging",
+  "git_repo": "git@github.com:promet/CM22Slave",
+  "git_ref": "master",
+  "archive_url": "https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/slave_20140224-171812.tar.gz"
 }

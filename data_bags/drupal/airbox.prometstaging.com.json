@@ -1,17 +1,17 @@
 {
-  "id": "airbox-prometdev-com",
+  "id": "airbox-prometstaging-com",
   "databases": {
     "default": {
       "default": {
-        "username": "airboxdevDBA",
-        "database": "airboxdevDB",
-        "password": "airboxdevPASS",
+        "username": "airboxstageDBA",
+        "database": "airboxstageDB",
+        "password": "airboxstagePASS",
         "driver": "mysql",
         "host": "localhost"
       }
     }
   },
-  "uri": "airbox.prometdev.com",
+  "uri": "airbox.prometstaging.com",
   "user": "promet",
   "group": "www-data",
   "doc_root": "www"

@@ -1,0 +1,14 @@
+{
+  "id": "cm22slave-satelite",
+  "databases": {
+    "default": {
+      "default": {
+        "username": "22ndpapersite",
+        "password": "Ok9AiThu.Uekaila0",
+        "driver": "mysql",
+        "host": "b630019121af2ab16e948d58358ecd5e594f6cc8.rackspaceclouddb.com"
+      }
+    }
+  },
+  "environment": "prod"
+}

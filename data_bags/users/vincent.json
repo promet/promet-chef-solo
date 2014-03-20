@@ -1,6 +1,7 @@
 {
   "groups": [
-    "sysadmin"
+    "sysadmin",
+    "www-data"
   ],
   "comment": "Vincent Hubert Caballo",
   "id": "vincent",

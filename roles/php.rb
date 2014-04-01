@@ -7,7 +7,8 @@ run_list(
     "recipe[php::module_memcache]",
     "recipe[promet_php::module_apc]",
     "recipe[promet_php::module_mcrypt]",
-    "recipe[php::module_curl]"
+    "recipe[php::module_curl]",
+    "recipe[composer]"
 )
 
 default_attributes(

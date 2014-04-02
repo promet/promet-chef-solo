@@ -8,7 +8,7 @@ run_list(
     "recipe[promet_php::module_apc]",
     "recipe[promet_php::module_mcrypt]",
     "recipe[php::module_curl]",
-    "recipe[composer]"
+    "role[composer]"
 )
 
 default_attributes(

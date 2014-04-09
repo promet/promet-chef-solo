@@ -2,6 +2,13 @@
 # Cookbook Name:: postfix
 # Recipe:: mailutils 
 
-package "mailutils" do
-  action :install
+case node['platform_family']
+when 'rhel', 'fedora'
+  package 'bind-utils' do
+    action :install
+  end
+when 'debian'
+  package 'mailutils' do
+    action :install
+  end
 end

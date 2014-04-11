@@ -5,8 +5,6 @@ run_list(
   "recipe[nagios::client]",
   "recipe[nagios::base_monitoring]",
   "recipe[nagios::lamp_promet]",
-  "recipe[database::nagios_user]",
-  "recipe[database::mysql]"
 )
 
 default_attributes(

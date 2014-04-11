@@ -24,6 +24,7 @@ run_list(
     "role[newrelic]",
     "role[cronapt]",
     "recipe[cron]",
+    "role[rsyslog-client]",
     "recipe[ntp]"
 )
 #default['openssh']['server']['subsystem']

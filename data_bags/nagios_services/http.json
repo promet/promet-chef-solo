@@ -1,6 +1,6 @@
 {
   "id": "http",
   "hostgroup_name": "lamp-promet",
-  "command_line": "$USER1$/check_http $HOSTADDRESS$",
+  "command_line": "$USER1$/check_http -a demo:demo $HOSTADDRESS$",
   "servicegroups": "lamp-promet"
 }

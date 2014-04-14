@@ -2,7 +2,7 @@ name "base-centos64"
 description "Base Promet Role"
 run_list(
     "recipe[yum]",
-    "recipe[yum::epel]",
+    "recipe[yum-epel]",
     "recipe[logrotate]",
     "recipe[build-essential]",
     "role[logwatch]",

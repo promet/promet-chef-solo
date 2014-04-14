@@ -9,11 +9,6 @@
 
 include_recipe 'git'
 
-composer '/usr/local/bin' do
-  owner node.cm22.machine_user
-  action [:install, :update]
-end
-
 directory node.cm22.webroot do
   owner     node.cm22.httpd_group
   group     node.cm22.httpd_group

@@ -5,7 +5,7 @@
   ],
   "comment": "Kabenla Armah",
   "id": "kabenla",
-  "ssh_keys": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDZTf4I6pSiFLTi9rtJEx69phPPPlzM5obRKuL9mq5CcaVWIoenGYo6uhikU9z67/osBi3YBuquyViajSw7/oX3JQ6Mj2eD2Qbowm5nyEe0Ln6MFxYqS9NZ9IzDpTvrNorHT7MgvKOIFkNC5JZfEu/7zwct7CVKKqQq01ri6ru6aNNOyOOxhp96qyO5DaDh1VcU+7DI8hgjE6nc3nUFko1ynw+KWbHW4DjTTyj2hpvT4aDgGIsQGzFfvMVy5G1UYclUjp7zZIEBuXs1rStsykVMdQsVeuRtJWDG35fQ9/DPjXDXEUt5/TJTHb7kVHaDp+T9Y3mHnRbZRBnL7Qd0ew5v Kabenla@Morpheus-IV.local",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZTf4I6pSiFLTi9rtJEx69phPPPlzM5obRKuL9mq5CcaVWIoenGYo6uhikU9z67/osBi3YBuquyViajSw7/oX3JQ6Mj2eD2Qbowm5nyEe0Ln6MFxYqS9NZ9IzDpTvrNorHT7MgvKOIFkNC5JZfEu/7zwct7CVKKqQq01ri6ru6aNNOyOOxhp96qyO5DaDh1VcU+7DI8hgjE6nc3nUFko1ynw+KWbHW4DjTTyj2hpvT4aDgGIsQGzFfvMVy5G1UYclUjp7zZIEBuXs1rStsykVMdQsVeuRtJWDG35fQ9/DPjXDXEUt5/TJTHb7kVHaDp+T9Y3mHnRbZRBnL7Qd0ew5v Kabenla@Morpheus-IV.local",
   "password": "$1$4kOsw24S$aTh6HvayKh5DZKs0iyonG1",
 "shell": "/bin/bash"
 }

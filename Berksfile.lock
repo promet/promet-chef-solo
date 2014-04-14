@@ -18,6 +18,16 @@
       "git": "git://github.com/zircote/chef-composer.git",
       "ref": "007912436c79f0b0c1f2d1732413ac42279811c2"
     },
+    "moar_php": {
+      "locked_version": "0.1.1",
+      "git": "git@github.com:promet/chef-moar_php",
+      "ref": "f6ccc9c94a3c358fb674be762821ca6fd5aea5ce"
+    },
+    "promet_php": {
+      "locked_version": "0.2.2",
+      "git": "git@github.com:promet/promet_php-cookbook",
+      "ref": "3e3063b27f9803f5a09ef84fd9d36d2d5104c7ee"
+    },
     "java": {
       "locked_version": "1.19.0"
     },
@@ -59,6 +69,9 @@
     },
     "apache2": {
       "locked_version": "1.8.14"
+    },
+    "apt": {
+      "locked_version": "2.3.8"
     }
   }
 }

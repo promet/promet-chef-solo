@@ -11,6 +11,7 @@ run_list(
     "recipe[promet_database::nagios_user]",
     "recipe[promet_database::mysql]",
     "role[ruby]",
+    "role[cronapt]",
     "role[rsyslog-client]",
     "recipe[promet_rsyslog::papertrail]",
     "role[nagios-client]",

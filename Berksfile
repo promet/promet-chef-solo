@@ -4,3 +4,4 @@ cookbook 'drupal', '~>1.2', github: 'promet/drupal_cookbook', branch: 'hotfix-we
 cookbook 'composer', '~>0.1', github: 'zircote/chef-composer'
 cookbook 'moar_php', git: 'git@github.com:promet/chef-moar_php'
 cookbook 'promet_php', '~>0.2', git: 'git@github.com:promet/promet_php-cookbook'
+cookbook 'promet_rsyslog', '=>0.2.1', github: 'promet/promet_rsyslog'

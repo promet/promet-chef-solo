@@ -8,6 +8,7 @@ run_list(
     "recipe[database::nagios_user]",
     "recipe[database::mysql]",
     "role[automysqlbackup]",
+    "role[ruby]",
     "recipe[promet_rsyslog::papertrail]",
 )
 

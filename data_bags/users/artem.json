@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "Artem",
+  "id": "artem",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDxx/uHMFQys4+3xpf6lCMrKM4hcjmECRolYXuX7mYOLRzuNpO4ZuVEgWga1/Fum3yD6u+vRogIvd9BsLK43SfUUgcRhYLOCTkvIe4LF+K2Len0PkUZzL86e1jQqJuXeJXNsvMquWQPG4vE4/OyLemSZ6M2aj9J83v/YOT45YBw+R28gvWrjw6KK8TIMSgamZGza8/hRvXLrjgJc7gr6qrPQFxwmbAw5hoCZEyRox66atzok6pw2wMGiyxqF0FTuPQFn02BX6FpGyCKw9FmKFWQH8Z8EnISXdS5dnI+thYcGedm4tt1asdqriJNb/rixcGAIdCNqBdQAe5WGlDS/Mlf lu4nik@1003",
+  "password": "$1$FuQ6OgNy$hjxJ03EOPLuXk7FwRfuai1",
+"shell": "/bin/bash"
+}

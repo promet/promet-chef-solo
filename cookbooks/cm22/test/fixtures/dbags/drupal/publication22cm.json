@@ -18,5 +18,5 @@
   "environment": "staging",
   "git_repo": "git@github.com:promet/CM22Slave",
   "git_ref": "master",
-  "archive_url": "https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/slave_20140224-171812.tar.gz"
+  "archive_url": "https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/slave_current.tar.gz"
 }

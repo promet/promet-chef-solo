@@ -29,11 +29,11 @@ default.cm22.slave.masters        = {
 }
 default.cm22.slave.git_repo       = 'git@github.com:promet/CM22Slave'
 default.cm22.slave.git_ref        = 'master'
-default.cm22.slave.archive.source = 'https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22slave_20140121-195306.tar.gz'
+default.cm22.slave.archive.source = 'https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/slave_production.tar.gz'
 default.cm22.slave.base_data_bag_item = 'cm22slave-satelite'
 
 default.cm22.master.process         = []
 default.cm22.master.git_repo        = 'git@github.com:promet/cm22master'
 default.cm22.master.git_ref         = 'master'
-default.cm22.master.archive.source  = 'https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/cm22master_20140121-195531.tar.gz'
+default.cm22.master.archive.source  = 'https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/master_production.tar.gz'
 default.cm22.master.base_data_bag_item = 'cm22master'

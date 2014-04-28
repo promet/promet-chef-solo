@@ -3,8 +3,8 @@ description "nagios client roles"
 run_list(
   "recipe[nagios]",
   "recipe[nagios::client]",
-  "recipe[nagios::base_monitoring]",
-  "recipe[nagios::lamp_promet]",
+  "recipe[promet_nagios::base_monitoring]",
+  "recipe[promet_nagios::lamp_promet]",
 )
 
 default_attributes(

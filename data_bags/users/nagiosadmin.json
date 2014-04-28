@@ -2,6 +2,7 @@
   "id": "nagiosadmin",
   "groups": "ops",
   "htpasswd": "{SHA}26EtrruJDKnNxG8PqQn02TmEvbc=",
+  "mysql": "pr0m3tnagios",
   "nagios": {
     "pager": "sysadmins@promethost.com",
     "email": "sysadmins@promethost.com"

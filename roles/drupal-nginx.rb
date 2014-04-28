@@ -15,10 +15,12 @@ run_list(
     "role[rsyslog-client]",
     "recipe[promet_rsyslog::papertrail]",
     "role[nagios-client]",
+    "role[s3fs-backup]",
+    "role[slaughtered]",
 )
 
 default_attributes(
     :rsyslog => {
       :papertrail_dest => "logs.papertrailapp.com:43039"
-    }
+    },
 )

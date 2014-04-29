@@ -6,7 +6,6 @@ run_list(
     "role[php-nginx]",
     "recipe[drupal::drush]",
     "role[mysql_server]",
-    "recipe[promet-tools::mytop]",
     "recipe[promet_mysql::my_root]",
     "recipe[promet_database::nagios_user]",
     "recipe[promet_database::mysql]",
@@ -15,6 +14,7 @@ run_list(
     "role[rsyslog-client]",
     "recipe[promet_rsyslog::papertrail]",
     "role[nagios-client]",
+    "role[automysqlbackup]",
     "role[s3fs-backup]",
     "role[slaughtered]",
 )

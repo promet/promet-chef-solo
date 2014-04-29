@@ -22,7 +22,6 @@ action :update do
 
   remote_file cm22_archive do
     source archive_url
-    action :create_if_missing
   end
 
   directory root do

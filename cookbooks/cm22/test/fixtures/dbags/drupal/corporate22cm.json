@@ -16,5 +16,5 @@
   "environment": "staging",
   "git_repo": "git@github.com:promet/cm22master",
   "git_ref": "master",
-  "archive_url": "https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/master_20140224-171414.tar.gz"
+  "archive_url": "https://s3-us-west-1.amazonaws.com/promet-22cm/archives/build/master_current.tar.gz"
 }

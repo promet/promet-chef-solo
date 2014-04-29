@@ -10,7 +10,6 @@ run_list(
     "recipe[vim]",
     "recipe[mlocate]",
     "recipe[motd-tail]",
-   # "role[fail2ban]",
     "recipe[tmux]",
     "recipe[git]",
     "role[chef-client]",
@@ -20,7 +19,6 @@ run_list(
     "role[users]",
     "role[postfix]",
     "role[ssh_known_hosts]",
-   # "recipe[promet-tools::gregwants]",
     "recipe[ntp]"
 )
 default_attributes(

@@ -15,7 +15,6 @@ run_list(
     "role[chef-client]",
     "recipe[chef_gem]",
     "recipe[chef_gem::ruby-shadow]",
-    "role[sudo]",
     "role[users]",
     "role[postfix]",
     "recipe[promet_ssh_known_hosts::github]",

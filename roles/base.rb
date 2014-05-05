@@ -26,6 +26,7 @@ run_list(
     "role[cronapt]",
     "recipe[cron]",
     "role[rsyslog-client]",
+    "recipe[timezone-ii]",
     "recipe[ntp]"
 )
 #default['openssh']['server']['subsystem']
@@ -33,6 +34,7 @@ default_attributes(
   "build_essential" => {
     "compiletime" => true
   },
+  "tz" => "America/Chicago",
   "openssh" => {
     "server" => {
       "subsystem" => "sftp /usr/lib/openssh/sftp-server",

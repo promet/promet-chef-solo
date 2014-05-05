@@ -10,7 +10,6 @@
     "tmux": "= 1.2.2",
     "sudo": "= 2.3.0",
     "composer": "= 0.0.7",
-    "promet_sudo": "= 0.2.0",
     "runit": "= 1.1.6",
     "rsyslog": "= 1.6.0",
     "promet_php": "= 0.2.2",

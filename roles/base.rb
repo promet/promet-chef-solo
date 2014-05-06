@@ -24,7 +24,7 @@ run_list(
     "role[newrelic]",
     "role[cronapt]",
     "recipe[cron]",
-    "role[rsyslog-client]",
+    "recipe[rsyslog]",
     "recipe[timezone-ii]",
     "recipe[ntp]"
 )

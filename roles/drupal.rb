@@ -9,12 +9,8 @@ run_list(
     "role[automysqlbackup]",
     "role[nagios-client]",
     "role[ruby]",
-    "role[rsyslog-client]",
-    "recipe[promet_rsyslog::papertrail]",
+    "role[rsyslog]",
 )
 
 default_attributes(
-    :rsyslog => {
-      :papertrail_dest => "logs.papertrailapp.com:43039"
-    }
 )

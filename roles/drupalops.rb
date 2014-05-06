@@ -7,12 +7,9 @@ run_list(
     "recipe[promet_database::nagios_user]",
     "recipe[database::mysql]",
     "role[ruby]",
-    "recipe[promet_rsyslog::papertrail]",
+    "role[rsyslog]",
     "role[automysqlbackup]"
 )
 
 default_attributes(
-    :rsyslog => {
-      :papertrail_dest => "logs.papertrailapp.com:43039"
-    }
 )

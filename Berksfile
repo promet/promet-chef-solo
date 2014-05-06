@@ -11,3 +11,4 @@ cookbook 'promet_ssh_known_hosts', '=>0.2.1', github: 'promet/promet_ssh_known_h
 cookbook 'promet-tools', '~>0.2', github: 'promet/promet-tools'
 cookbook 'promet_users', '~>0.2', github: 'promet/promet_users'
 cookbook 'promet_sudo', '~>0.1', github: 'promet/promet_sudo'
+cookbook 'promet_postfix', '~>0.1', github: 'promet/promet_postfix'

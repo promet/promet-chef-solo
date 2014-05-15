@@ -1,0 +1,6 @@
+{
+  "id": "http-nginx",
+  "hostgroup_name": "nginx",
+  "command_line": "$USER1$/check_http -a demo:demo $HOSTADDRESS$",
+  "servicegroups": "nginx"
+}

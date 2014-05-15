@@ -1,6 +1,6 @@
 {
   "id": "ssh",
-  "hostgroup_name": "lamp-promet",
+  "hostgroup_name": "linux",
   "command_line": "$USER1$/check_ssh $HOSTADDRESS$",
-  "servicegroups": "lamp-promet"
+  "servicegroups": "linux"
 }

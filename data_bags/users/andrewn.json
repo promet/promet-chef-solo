@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "Andrew N",
+  "id": "andrewn",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMVVynmxaSJD/x4iVWMa+oYtUi9bLhEkNFA8a2JmlqQHdMhMt94QcrjqCD2edBhWfk+HpV8QUmZCRzyAKxUy4KAy6QtRxAqBZWE5+M6gqx91QrVt2itEfDL9Tbj8kt1BkSBY3owGwHuhaZjrsaRsV6Z1TYFAkJ5Aj+sZ9fqoo74tYLEReboOuUs+f65JNbgAlgMjKZlQJi0QCVQ+qgu08qgbXLncPEF/+jfOyNTNjKbcoxIO2PCfcu10xQ4eCvmRay70iCg3O3jVsAJzKR4UCzkNXuC5mN5OhEhIzSm2oAws9ww+9cO+eb9O6gs0AUUhieNL8OUFufl6ND5pT5NcYj nnevill@mx",
+  "password": "$1$rj3UqJpq$cPWM9S3d.sCJPAda2vRLE1",
+"shell": "/bin/bash"
+}

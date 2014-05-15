@@ -15,16 +15,17 @@ run_list(
     "role[chef-client]",
     "recipe[chef_gem]",
     "recipe[chef_gem::ruby-shadow]",
-    "role[sudo]",
     "role[users]",
     "role[postfix]",
-    "role[ssh_known_hosts]",
-    "recipe[promet-tools]",
+    "recipe[promet_ssh_known_hosts::github]",
     "recipe[promet-tools::gregwants]",
+    "recipe[promet-tools::mytop]",
+    "recipe[promet-tools::github]",
     "role[newrelic]",
     "role[cronapt]",
     "recipe[cron]",
-    "role[rsyslog-client]",
+    "recipe[rsyslog]",
+    "recipe[timezone-ii]",
     "recipe[ntp]"
 )
 #default['openssh']['server']['subsystem']
@@ -32,6 +33,7 @@ default_attributes(
   "build_essential" => {
     "compiletime" => true
   },
+  "tz" => "America/Chicago",
   "openssh" => {
     "server" => {
       "subsystem" => "sftp /usr/lib/openssh/sftp-server",

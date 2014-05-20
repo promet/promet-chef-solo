@@ -1,0 +1,5 @@
+{
+"id": "nginx",
+"alias": "nginx",
+"notes": "Services for nginx roles"
+}

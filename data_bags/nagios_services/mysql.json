@@ -1,6 +1,6 @@
 {
   "id": "mysql",
-  "hostgroup_name": "lamp-promet",
+  "hostgroup_name": "mysql_server",
   "command_line": "$USER1$/check_nrpe -H $HOSTADDRESS$ -c check_mysql -t 20",
   "servicegroups": "lamp-promet"
 }

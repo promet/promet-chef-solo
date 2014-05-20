@@ -28,7 +28,6 @@
     "motd-tail": "= 1.2.0",
     "monit": "= 0.7.1",
     "mlocate": "= 0.0.2",
-    "logwatch": "= 1.0.2",
     "logrotate": "= 1.2.0",
     "git": "= 2.5.2",
     "fail2ban": "= 2.1.1",

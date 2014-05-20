@@ -1,28 +1,29 @@
 action :update do
   machine_user  = @new_resource.machine_user
   subdomain     = @new_resource.subdomain
-  environment   = @new_resource.environment
-  machine_name  = @new_resource.machine_name
   root          = @new_resource.root
   home          = "/home/#{machine_user}"
   git_repo      = @new_resource.git_repo
   git_ref       = @new_resource.git_ref
   archive_url   = @new_resource.archive_url
 
-  archive_name        = ::File.basename ::URI.parse(archive_url).path
-  build_id            = archive_name.split('.').first.split('_').last
-  cm22_archive        = "#{Chef::Config[:file_cache_path]}/#{archive_name}"
+  archive_name  = ::File.basename ::URI.parse(archive_url).path
+  cm22_archive  = "#{Chef::Config[:file_cache_path]}/#{archive_name}"
 
-  conf_d = "#{node.drupal.settings_dir}/#{subdomain}"
-  drupal_settings conf_d do
+  conf_d        = "#{node.drupal.settings_dir}/#{subdomain}"
+  drupal_confd  = drupal_settings conf_d do
     config new_resource.config
     owner machine_user
     group node.cm22.httpd_group
+    action :nothing
   end
+  drupal_confd.run_action(:create)
 
-  remote_file cm22_archive do
+  archive_file = remote_file cm22_archive do
     source archive_url
+    action :nothing
   end
+  archive_file.run_action(:create)
 
   directory root do
     owner     machine_user
@@ -42,6 +43,7 @@ action :update do
     reference   git_ref
   end
 
+  build_id  = ::File.mtime(cm22_archive).to_i
   new_build = "#{root}/builds/#{build_id}"
 
   unless ::File.exists? "#{new_build}/index.php"

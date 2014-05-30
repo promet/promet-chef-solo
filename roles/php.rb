@@ -22,5 +22,8 @@ default_attributes(
     "realpath_cache_size" => "64k",
     "date_timezone" => "America/Chicago",
     "conf_dir" => "/etc/php5/apache2",
+    "apc" => {
+      "enable_cli" => "0"
+    }
   }
 )

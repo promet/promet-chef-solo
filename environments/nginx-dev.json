@@ -39,6 +39,13 @@
     "cronapt": {
       "enable_upgrade": "true",
       "nightly": "true"
+    },
+    "rbenv": {
+    "global": "2.1.1",
+    "rubies": ["2.1.1"],
+    "gems": {
+      "2.1.1": [{"name": "bundler"}]
     }
+   }
   }
 }

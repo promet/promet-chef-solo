@@ -5,4 +5,9 @@ run_list(
 )
 
 default_attributes(
+  {
+   "memcached" => {
+     "user" => "www-data"
+    }
+  }
 )

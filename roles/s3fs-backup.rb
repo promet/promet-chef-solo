@@ -3,7 +3,7 @@ description "s3fs-backup using backup gem config"
 run_list(
       "role[ruby]",
       "recipe[backup-cookbook::default]",
-#      "recipe[backup-cookbook::wwwbackup]",
+      "recipe[backup-cookbook::wwwbackup]",
       "recipe[backup-cookbook::mysqlbackup]",
 )
 

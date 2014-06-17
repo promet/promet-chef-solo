@@ -10,6 +10,7 @@ run_list(
 
 default_attributes(
   "nagios" => { 
+    "timezone" => "US/Central",
     "server_auth_method" => "htauth",
     "server_role" => "nagios-server",
     "notifications_enabled" => "1",

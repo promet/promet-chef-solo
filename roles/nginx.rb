@@ -10,5 +10,6 @@ default_attributes(
     :default_site_enabled => false,
     :keepalive_timeout => 15,
     :proxy_read_timeout => 20,
+    :worker_connections => 5000,
   }
 )

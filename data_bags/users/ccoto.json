@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "Carlos Coto",
+  "id": "ccoto",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3nfGMnempG9FYWs8A20oYxYTUWPtC/jsKq1uC60WRMHnlDiO2WXxX93i2kWKwc8KcDGgiIUl6J+ftPbLY0e1vrYl6tbYLBjRPh1I0gPCGT3Gsr3fBMA9HQUdawYV04yJTjWm9FjTkJE++b76KvxdEdaaevFp638uJ61gvaRn1gUVcWA4yfGSsMnUXwxeGxNVQ3v+DoU1qvnNCpp86C9g0r9q2O8GdroZdvmE9qMoapFhmqi626LWye1va3yGKbzadICAnqR67BGHK2A5XfgAu9ugqkOppFNCHsrrst+bXP9pLgbwHOWZj7kZrJAFGFUr/U/V3o1pj5IBEEa3ka2dP ccoto@DPs-MacBook-Pro.local",
+  "password": "$1$Tu0Ie/im$7lrMqPfgAX.NzTHuJLJj10",
+  "shell": "/bin/bash"
+}

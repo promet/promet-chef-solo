@@ -7,7 +7,7 @@ run_list(
 default_attributes(
         :cronapt => {
           :mailto => "sysadmins@prometsource.com",
-          :enable_upgrade => 'false',
-          :nightly => 'false'
+          :enable_upgrade => false,
+          :nightly => false
       }
 )

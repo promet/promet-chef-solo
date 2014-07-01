@@ -26,6 +26,7 @@ run_list(
     "recipe[cron]",
     "recipe[rsyslog]",
     "recipe[timezone-ii]",
+    "recipe[omnibus_updater]",
     "recipe[ntp]"
 )
 #default['openssh']['server']['subsystem']
@@ -42,6 +43,11 @@ default_attributes(
     },
     "client " => {
       "protocol" => "2"
-    }
+    },
+  },
+  "omnibus_updater" => {
+# see environments for enabling
+    "disabled" => true,
+    "version" => '11.12.2-1'
   }
 )

@@ -37,8 +37,11 @@
       }
     },
     "cronapt": {
-      "enable_upgrade": "true",
-      "nightly": "true"
+      "enable_upgrade": true,
+      "nightly": true
+    },
+    "omnibus_updater": {
+      "disabled": false
     },
     "rbenv": {
     "global": "2.1.1",

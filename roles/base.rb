@@ -47,7 +47,6 @@ default_attributes(
   },
   "omnibus_updater" => {
 # see environments for enabling
-    "disabled" => true,
-    "version" => '11.12.2-1'
+    "disabled" => true
   }
 )

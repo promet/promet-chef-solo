@@ -52,8 +52,11 @@
       }
     },
     "cronapt": {
-      "enable_upgrade": "true",
-      "nightly": "true"
+      "enable_upgrade": true,
+      "nightly": true
+    },
+    "omnibus_updater": {
+      "disabled": false
     }
   }
 }

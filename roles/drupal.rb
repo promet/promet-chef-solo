@@ -6,6 +6,7 @@ run_list(
     "role[lamp-promet]",
     "recipe[drupal::drush]",
     "role[promet_mysql]",
+    "role[php-apache]",
     "role[automysqlbackup]",
     "role[nagios-client]",
     "role[ruby]",

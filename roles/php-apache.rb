@@ -1,8 +1,8 @@
-name "php-nginx"
-description "PHP role for NGINX"
+name "php-apache"
+description "PHP role for Promet Apache Servers"
 run_list(
     "role[php]",
-    "recipe[promet_php::php-fpm]",
+    "recipe[promet_php::apache2]",
     "recipe[promet_php::module_apc]",
     "recipe[promet_php::module_mcrypt]",
     "role[composer]"

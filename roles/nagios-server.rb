@@ -2,6 +2,7 @@ name "nagios-server"
 description "Nagios Monitoring server"
 run_list(
   "role[base]",
+  "role[promet_base]",
   "recipe[nagios]",
   "recipe[nagios::server]",
   "recipe[nagios::pagerduty]",

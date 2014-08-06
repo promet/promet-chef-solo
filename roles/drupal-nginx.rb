@@ -10,7 +10,6 @@ run_list(
     "role[promet_mysql]",
     "role[ruby]",
     "role[rsyslog]",
-    "role[cronapt]",
     "role[nagios-client]",
     "role[automysqlbackup]",
     "role[slaughtered]",

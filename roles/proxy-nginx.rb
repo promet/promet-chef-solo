@@ -8,7 +8,6 @@ run_list(
     "role[php-nginx]",
     "role[ruby]",
     "role[rsyslog]",
-    "role[cronapt]",
     "role[nagios-client]",
 )
 

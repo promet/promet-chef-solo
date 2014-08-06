@@ -9,7 +9,6 @@ run_list(
     "recipe[promet-tools::mytop]",
     "recipe[promet-tools::github]",
     "role[newrelic]",
-    "role[cronapt]",
     "recipe[timezone-ii]",
     "recipe[omnibus_updater]",
 )

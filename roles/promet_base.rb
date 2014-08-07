@@ -10,12 +10,7 @@ run_list(
     "recipe[promet-tools::github]",
     "role[newrelic]",
     "recipe[timezone-ii]",
-    "recipe[omnibus_updater]",
 )
 default_attributes(
   "tz" => "America/Chicago",
-  "omnibus_updater" => {
-# see environments for enabling
-    "disabled" => true
-  }
 )

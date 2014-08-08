@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "Bobo",
+  "id": "bobo",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC79ZZbrhX34Jh3I6CRmcn7PiYhd6JSpvoTRcKfcv1SPw0pZKYlMzKqsnjn3Nah26jUTqtPztp96fIeZycIH022waG7O44iufRZ1mDIs7QFPtSk7F+avF0nmG1t8tTNkonLA8pDepyzun3Jtbxqi/bDRW6CnU9oICj+LSN+Z5weYXdkS0qU/MvSubMow2RP3ahppg5CJl8d0khAT+aNDIc5Sh23Eh+YK79uMpGBJ+gb861qH0h+Zi8SFwOz8wdxO+F0KhYmJrMEOYSR0rMJU3xWNd5fOgNumBi8EyLOH0Z8wRrvxqJXoYLI39LfsZqJ/zLXKTCKa6/tgizRak6xJWvn bobo@1066",
+  "password": "$1$e3xDFzwt$SRMJXvgrB7r.cgEU.NhPx0",
+"shell": "/bin/bash"
+}

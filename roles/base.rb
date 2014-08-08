@@ -13,6 +13,7 @@ run_list(
     "role[chef-client]",
     "recipe[chef_gem]",
     "recipe[chef_gem::ruby-shadow]",
+    "role[users]",
     "role[postfix]",
     "recipe[cron]",
     "recipe[rsyslog]",
@@ -25,7 +26,7 @@ default_attributes(
   "openssh" => {
     "server" => {
       "subsystem" => "sftp /usr/lib/openssh/sftp-server",
-#      "password_authentication" => "no",
+#      "password_authentication" => "yes",
       "permit_root_login" => "no"
     },
     "client " => {

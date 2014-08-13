@@ -14,7 +14,7 @@
     "runit": "= 1.1.6",
     "rsyslog": "= 1.6.0",
     "promet_rsyslog": "~> 0.2",
-    "promet_php": "= 0.1.0",
+    "promet_php": "= 0.3.6",
     "postgresql": "= 3.0.2",
     "postfix": "= 3.0.4",
     "php": "= 1.2.2",

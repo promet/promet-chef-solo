@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "William Estrada",
+  "id": "william",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7AtoiVHzoPKzChZ9l/W4AyT46l3+CAvXusruni4vdBpitruVyaqWybe6qnj2DahN2tizkrlGlkG/4D4a5qvJ+1y6f7hf99k5P1I0OMjJPS8OdUHFeAEV/o8b074uk6FciVsbCP1464V3odsri26uGjVwdmw89RKTYOAvt55G/nyBrg3XvbCSgsiiqVbYzhSyb4mOQWj0tOZYBpR1COqXKJBJRUebnYo8x19d/UoPNeWK1Kek8amRC6iwfI4ORBt77Rh4Dl8TFJQagZa/7KyGhxhzHVzUzOGWOm5gxRYtEUTeE3SdroyBngeglg9OhMHvAY73nF/0kOKu1B/rGdfoD william.estrada@webbywe.com",
+  "password": "$1$up9FLoZy$LpQFxY5IQdEraVMaeSdec/",
+  "shell": "/bin/bash"
+}

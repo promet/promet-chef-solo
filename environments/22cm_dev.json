@@ -8,7 +8,7 @@
     "sudo": "= 2.3.0",
     "rsyslog": "= 1.6.0",
     "promet_rsyslog": "= 0.2.1",
-    "promet_php": "= 0.3.6",
+    "promet_php": "= 0.4.3",
     "php": "= 1.4.7",
     "promet-site-cookbook": "= 0.2.0",
     "openssh": "= 1.3.2",

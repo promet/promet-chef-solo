@@ -12,7 +12,7 @@
     "composer": "= 0.0.7",
     "runit": "= 1.1.6",
     "rsyslog": "= 1.6.0",
-    "promet_php": "= 0.3.6",
+    "promet_php": "= 0.4.3",
     "promet_rsyslog": "= 0.2.1",
     "php": "= 1.4.7",
     "perl": "= 1.1.2",

@@ -1,0 +1,11 @@
+{
+  "groups": [
+    "dev",
+    "www-data"
+  ],
+  "comment": "Doug Reith",
+  "id": "dooug",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIYL8qj3fX3F1tthg6HeIHNdHBvSTADvNCycyyyKP7zVo1ZpDJTrDyAJAsnM1RmJP/jrxuQWWCE/FvlQJQKHw61P2MMZ55W+y0k0aB44+ITdCWx/E1jFFDDM69wt7GjV+ojIwkPy+vQPkim4baOM2OMMvPgea0pvrewYeNrnHaBh65cG/V2han5Ih5vncWTZj34+urHTBNv+h7xl6o6Ermi9D97FDYcGJkelBTaRXh5bF+Y0d3jV6AB2t9DlguMfEqq1n42OcoPsfLFyrC+MIPFN1kAmGVr98JAqHC4iEicNs6ZZ8WerNVqrerXrg4YkipwieUp6yTTsmH5KXJG6/B dooug@Douglass-MacBook-Pro.local",
+  "password": "$1$U4K/X4PL$KDCFQrqWgkYHHIMpscJfa/",
+  "shell": "/bin/bash"
+}

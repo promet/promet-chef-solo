@@ -44,10 +44,10 @@
       "disabled": false
     },
     "rbenv": {
-    "global": "2.1.1",
-    "rubies": ["2.1.1"],
+    "global": "2.0.0-p481",
+    "rubies": ["2.0.0-p481"],
     "gems": {
-      "2.1.1": [{"name": "bundler"}]
+      "2.0.0-p481": [{"name": "bundler"}]
     }
    }
   }

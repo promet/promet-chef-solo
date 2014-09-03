@@ -6,10 +6,11 @@ run_list(
 
 default_attributes(
   :nginx => {
-    :server_tokens => "off",
+    :server_tokens => 'off',
     :default_site_enabled => false,
     :keepalive_timeout => 15,
     :proxy_read_timeout => 20,
     :worker_connections => 5000,
+    :client_max_body_size => '50M'
   }
 )

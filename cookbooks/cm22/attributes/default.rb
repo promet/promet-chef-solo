@@ -17,7 +17,8 @@ default.cm22.slave.sites = {
   "the_wilmette_beacon"         => "wilmettebeacon",
   "the_winnetka_current"        => "winnetkacurrent",
   "the_highland_park_landmark"  => "hplandmark",
-  "malibu_surfside_news"        => "malibusurfsidenews"
+  "malibu_surfside_news"        => "malibusurfsidenews",
+  "the_glencoe_anchor"          => "glencoeanchor"
 }
 
 default.cm22.slave.process        = []

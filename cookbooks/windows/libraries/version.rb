@@ -19,7 +19,7 @@
 #
 
 if RUBY_PLATFORM =~ /mswin|mingw32|windows/
-  require 'ruby-wmi'
+  require_relative 'wmi_helper'
   require 'Win32API'
 end
 
@@ -71,7 +71,6 @@ module Windows
     SM_SERVERR2 = 89.freeze unless defined?(SM_SERVERR2)
 
     # http://msdn.microsoft.com/en-us/library/ms724358(v=vs.85).aspx
-    # this is what it sounds like...when kittens die
     SKU = {
       0x00000006 => {:ms_const => 'PRODUCT_BUSINESS', :name => 'Business'},
       0x00000010 => {:ms_const => 'PRODUCT_BUSINESS_N', :name => 'Business N'},
@@ -101,6 +100,7 @@ module Windows
       0x00000030 => {:ms_const => 'PRODUCT_PROFESSIONAL', :name => 'Professional'},
       0x00000045 => {:ms_const => 'PRODUCT_PROFESSIONAL_E', :name => 'Not supported'},
       0x00000031 => {:ms_const => 'PRODUCT_PROFESSIONAL_N', :name => 'Professional N'},
+      0x00000067 => {:ms_const => 'PRODUCT_PROFESSIONAL_WMC', :name => 'Professional with Media Center'},
       0x00000018 => {:ms_const => 'PRODUCT_SERVER_FOR_SMALLBUSINESS', :name => 'Windows Server 2008 for Windows Essential Server Solutions'},
       0x00000023 => {:ms_const => 'PRODUCT_SERVER_FOR_SMALLBUSINESS_V', :name => 'Windows Server 2008 without Hyper-V for Windows Essential Server Solutions'},
       0x00000021 => {:ms_const => 'PRODUCT_SERVER_FOUNDATION', :name => 'Server Foundation'},
@@ -140,6 +140,7 @@ module Windows
     end
 
     WIN_VERSIONS = {
+      "Windows Server 2012 R2" => {:major => 6, :minor => 3, :callable => lambda{ @product_type != VER_NT_WORKSTATION }},
       "Windows 8" => {:major => 6, :minor => 2, :callable => lambda{ @product_type == VER_NT_WORKSTATION }},
       "Windows Server 2012" => {:major => 6, :minor => 2, :callable => lambda{ @product_type != VER_NT_WORKSTATION }},
       "Windows 7" => {:major => 6, :minor => 1, :callable => lambda{ @product_type == VER_NT_WORKSTATION }},
@@ -193,10 +194,10 @@ module Windows
     # query WMI Win32_OperatingSystem for required OS info
     def get_os_info
       cols = %w{ Version ProductType OSProductSuite OperatingSystemSKU ServicePackMajorVersion ServicePackMinorVersion }
-      os_info = WMI::Win32_OperatingSystem.find(:first)
+      os_info = execute_wmi_query("select * from Win32_OperatingSystem").each.next
       cols.map do |c|
         begin
-          os_info.send(c)
+          wmi_object_property(os_info, c)
         rescue # OperatingSystemSKU doesn't exist in all versions of Windows
           nil
         end

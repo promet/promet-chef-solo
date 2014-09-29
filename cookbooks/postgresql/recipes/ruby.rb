@@ -24,12 +24,15 @@
 begin
   require 'pg'
 rescue LoadError
-  execute "apt-get update" do
-    ignore_failure true
-    action :nothing
-  end.run_action(:run) if node['platform_family'] == "debian"
 
-  node.set['build_essential']['compiletime'] = true
+  if platform_family?('ubuntu', 'debian')
+    e = execute 'apt-get update' do
+      action :nothing
+    end
+    e.run_action(:run) unless ::File.exists?('/var/lib/apt/periodic/update-success-stamp')
+  end
+
+  node.set['build-essential']['compile_time'] = true
   include_recipe "build-essential"
   include_recipe "postgresql::client"
 
@@ -48,14 +51,12 @@ rescue LoadError
   end
 
   node['postgresql']['client']['packages'].each do |pg_pack|
-
     resources("package[#{pg_pack}]").run_action(:install)
-
   end
 
   begin
     chef_gem "pg"
-  rescue Gem::Installer::ExtensionBuildError => e
+  rescue Gem::Installer::ExtensionBuildError, Mixlib::ShellOut::ShellCommandFailed => e
     # Are we an omnibus install?
     raise if RbConfig.ruby.scan(%r{(chef|opscode)}).empty?
     # Still here, must be omnibus. Lets make this thing install!
@@ -86,7 +87,8 @@ EOS
     end
 
     lib_builder = execute 'generate pg gem Makefile' do
-      command "#{RbConfig.ruby} extconf.rb"
+      # [COOK-3490] pg gem install requires full path on RHEL
+      command "PATH=$PATH:/usr/pgsql-#{node['postgresql']['version']}/bin #{RbConfig.ruby} extconf.rb"
       cwd ext_dir
       action :nothing
     end

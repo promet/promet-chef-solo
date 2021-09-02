@@ -149,8 +149,7 @@ GEM
     rainbow (2.0.0)
     rake (10.3.2)
     rbzip2 (0.2.0)
-    rdoc (4.1.1)
-      json (~> 1.4)
+    rdoc (6.3.2)
     rest-client (1.6.8)
       mime-types (~> 1.16)
       rdoc (>= 2.4.2)
@@ -234,9 +233,8 @@ PLATFORMS
 
 DEPENDENCIES
   berkshelf (~> 2.0)
-  chefspec (= 3.1)
+  chefspec (~> 3.1)
   foodcritic (~> 3.0)
   kitchen-vagrant (~> 0.14.0)
-  rspec (= 2.14.1)
   rubocop (~> 0.12)
   test-kitchen (~> 1.2.1)
